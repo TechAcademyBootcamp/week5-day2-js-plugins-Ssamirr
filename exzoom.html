@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="exzoom/jquery.exzoom.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="exzoom" id="exzoom" style="width:400px">
+        <!-- Images -->
+        <div class="exzoom_img_box">
+            <ul class='exzoom_img_ul'>
+                <li><img  src="alma.jpg" /></li>
+                <li><img src="https://www.cstatic-images.com/car-pictures/xl/usd00bmc931a021001.png" /></li>
+                <li><img src="https://di-uploads-pod26.dealerinspire.com/rusnakbmw/uploads/2019/10/cta_lease-specials.jpg" /></li>
+                <li><img src="https://cdn.motor1.com/images/mgl/vEJmQ/s1/bmw-i8-m-rendering.jpg" /></li>
+                <li><img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/45242/bmw-x1-facelift-right-front-three-quarter2.jpeg?q=85" /></li>
+                
+            </ul>
+        </div>
+        <!-- <a href="https://www.jqueryscript.net/tags.php?/Thumbnail/">Thumbnail</a> Nav-->
+        <div class="exzoom_nav"></div>
+        <!-- Nav Buttons -->
+        <p class="exzoom_btn">
+            <a href="javascript:void(0);" class="exzoom_prev_btn">
+            </a> <a href="javascript:void(0);" class="exzoom_next_btn"> >
+            </a>
+        </p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="exzoom/jquery.exzoom.js"></script>
+
+    <script>
+        $(function () {
+
+            $("#exzoom").exzoom({
+                // options here
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
