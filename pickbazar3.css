@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 200px;
+   overflow-x: hidden;
+   background: rgb(245, 243, 243);
+   
+}
+.hamburger .burger{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 4px;
+    }
+.searchbutton a{
+   color: black; 
+}
+.hlist{
+    list-style-type: none;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.hlist a{
+    text-decoration: none;
+    color: black;
+}
+.hlist a:hover{
+    color: rgb(0, 158, 127);
+    transition: 0.3s;
+}
+
+.menuhamburger{
+    display: none;
+    }
+.hamburger{
+    display: none;
+    
+}
+
+.menuimg{
+    display: none;
+   
+}
+.searchbutton{
+    display: none;
+    
+}
+.nav {
+    margin: auto;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.basliq{
+   z-index: 100;
+}
+.button1 {
+    background-color: rgb(0, 158, 127);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.grocery {
+    color: rgb(0, 158, 127) !important;
+}
+
+.list2 a {
+    text-decoration: none;
+}
+
+.list2 a:hover {
+    color: rgb(0, 158, 127) !important;
+    transition-duration: 0.3s;
+}
+
+.list3 a:hover {
+    color: rgb(0, 158, 127) !important;
+}
+
+.button1:hover {
+    background-color: rgb(0, 158, 127) !important;
+}
+.welcome{
+    color:  rgb(0, 158, 127);
+    font-family: 'Lato', sans-serif !important ;
+}
+.signup2{
+    color:  rgb(0, 158, 127);
+    font-family: 'Lato', sans-serif !important ;
+}
+.text-secondary{
+    font-family: 'Lato', sans-serif;
+}
+.text-secondary2{
+    font-family: 'Lato', sans-serif;
+}
+.joinj{
+        width: 300px;
+        height: 50px;
+        border: 1px solid rgb(241, 241, 241);
+        border-radius: 6px;
+        background: rgb(247, 247, 247);
+    }  
+.joinj:focus{
+        border-color: rgb(0, 158, 127);
+        transition: 0.3s;
+    }
+.jbutton{
+    padding: 6px 70px 6px 70px;
+    width: 300px;
+    height: 50px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 6px;
+    background-color: rgb(0, 158, 127);
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+.jbutton1{
+    font-family: 'Lato', sans-serif;
+    width: 300px;
+    height: 50px;
+    padding: 7px 10px 7px 10px;
+    border-radius: 6px;
+    background-color: rgb(66, 103, 178);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: white;
+}
+.jbutton2{
+    font-family: 'Lato', sans-serif;
+    padding: 7px 20px 7px 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    
+    color: white;
+}
+.linkjoin{
+    color:  rgb(0, 158, 127);
+    
+}
+.linklogin{
+    color:  rgb(0, 158, 127);
+    
+}
+.joinfooter{
+    color: rgb(0, 158, 127);
+}
+
+  ::placeholder { 
+      
+    color: black;
+    opacity: 0.2; 
+  }
+    .sizep{
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        }
+        .grocery1{
+            color: rgb(0, 158, 127);
+            height: 50px;
+            border-style: none;
+        }
+
+.all{
+        background-image: url(grocery-f1565ac25de02b9295dccc2da13004ab.png);
+        max-width: 100%;
+        min-height: 80vh;
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        overflow: hidden;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-color: rgb(247, 247, 247);
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        }
+    .backet{
+        background: rgb(0, 158, 127);
+        position: fixed;
+        right: 0;
+        width: 108px;
+        height: 91px;
+        z-index: 10;
+        border-radius: 9px 0px 0px 9px;
+        
+    }
+    .topbacket{
+        text-align: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+    .item{
+        font-size: 12px;
+    }
+    .item2{
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 6px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 158, 127);
+        margin: 0px 11px;
+        padding: 8px 0px;
+        border-style: none;
+     }
+     .inbacket{
+         transition: 1s;
+         width: 420px;
+         height: 100vh;
+         background: rgb(255, 255, 255);
+         position: fixed;
+         right: -100%;
+         z-index: 200;
+         top: 0;
+         bottom: 0;
+          /* display: none; */
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 21px 36px;
+    }
+    .show{
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .elmnt1{
+        padding: 20px 20px 0px 20px;
+    }
+    .elmnt2{
+        color: rgb(0, 158, 127);
+        font-weight: bold;
+    }
+    .elmnt3{
+        color: rgba(0, 0, 0, 0.25);
+    }
+    .elmnt5 a{
+        color: rgb(0, 158, 127);
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+    }
+    .elmnt5 a:hover{
+        text-decoration: none;
+        color: rgb(0, 158, 127);
+        transition: 0.3s;
+    }
+    .elmnt4{
+        color: rgb(119, 121, 140);
+        font-family: "Lato", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        
+    }
+
+        .search{
+        height: 50px;
+        width: 130px;
+        border-radius: 0px 8px 8px 0px;
+        background-color: rgb(0, 158, 127);
+        color: white;
+        border-style: none;
+    }
+    .orta{
+        max-width: 700px;
+    }
+    .inputgrocery{
+        height: 50px;
+        border-style: none;
+    }
+    .img{
+        width: 100%;
+        /* width: 350px;
+        height: 150px; */
+        padding: 20px;
+    }
+    .prevButton,.nextButton{
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        background: white;
+        color: green;
+        border-style: none;
+        position: absolute;
+        z-index: 1;
+    }
+    .nextButton{
+        right: 20px;
+    }
+    .slick-next{
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        right:70px;
+    }
+    .left li a{
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .left li a:hover{
+        color: rgb(0, 158, 127) !important;
+        transition: 0.3s;
+         }
+    .althisse , .althisse button{
+        color: rgb(0, 158, 127) !important;
+    }
+    .rounded-pill.border.bg-white.p-2.pr-4.pl-4:hover{
+        background: rgb(0, 158, 127) !important;
+        transition: 0.3s;
+         color: white;
+    }
+    .h6{
+        font-size: 14px;
+        opacity: 0.7; 
+         }
+         #aaa{
+             justify-content: space-evenly;
+         }
+    .loadmore{
+        color: rgb(0, 158, 127) ;
+        text-decoration: none !important;
+        border-radius: 10px;
+        }
+        .load1{
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    .loadmore:hover{
+        color: rgb(0, 158, 127);
+        } 
+    .font{
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 1.2;
+    } 
+    .pc{
+        font-size: 13px;
+        font-weight: 400;
+        color: rgb(119, 121, 140);
+    }
+    .ashagi{
+        flex-wrap: wrap;
+    }
+    .mbanan{
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        color: rgb(66, 69, 97);
+        line-height: 2rem;
+    }
+    .pul{
+        color: rgb(0, 158, 127);
+        font-size: 16px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900 !important;
+        margin: 0px 0px 0px 80px !important;
+        line-height: 1.5;
+
+    }
+    .rounded-pill.border.bg-white.p-2.pr-4.pl-4{
+        color: rgb(0, 158, 127);
+        display: inline;
+        
+    }
+    .buttonmodal{
+        margin-top: 40px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Lato', sans-serif;
+        color: rgb(13, 17, 54);
+        background-color: rgb(253, 250, 250);
+        border-radius: 10px;
+        }
+    .buttonmodal:hover{
+        text-decoration: none;
+        color: rgb(13, 17, 54);
+    }
+    .b2{
+        margin-left: 18px;
+    }
+    .enmodal{
+        padding: 0px 0px 0px 0px;
+    }
+
+
+    @media screen and (max-width:1000px){
+        
+        .hamburger{
+            display: block;
+        }
+        
+        .menuimg{
+            display: block;
+        }
+        .searchbutton{
+            display: block;
+        }
+        .basliq{
+            display: none;
+        }
+        .orta{
+            display: none !important;
+        }
+        .middle p{
+            display: none;
+        }
+        .middle h1{
+            font-size: 30px;
+            font-weight: bold;
+            }
+        .shekil3{
+            display: none;
+        }
+        .sol{
+            display: none;
+        }
+        
+}
+    @media screen and (max-width:700px){
+        .middle h1{
+           font-size: 18px !important;
+        }
+        .all{
+            min-height: 200px;
+        }
+    }
+    .js-title{
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        color: rgb(13, 17, 54);
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    .js-text{
+        font-family: "Lato", sans-serif;
+        color: rgb(0, 158, 127);
+margin-bottom: 10px;
+font-size: 15px;
+font-weight: 700;
+    }
+    .js-money{
+        font-size: 13px;
+        font-weight: 400;
+        color: rgb(119, 121, 140);
+        margin-bottom: 5px;
+        font-family: "Lato", sans-serif;
+    }
+    .products-money{
+        color: rgb(13, 17, 54);
+        font-family: "Lato", sans-serif;
+        font-size: 15px;
+font-weight: 700;
+    }
+    .dollar{
+        color: rgb(13, 17, 54);
+        font-family: "Lato", sans-serif;
+        font-size: 15px;
+font-weight: 700;
+    }
+    .style-count{
+        font-size: 15px;
+font-weight: 700;
+color: rgb(13, 17, 54);
+font-family: "Lato", sans-serif;
+    }
+    .jsleft{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .js-inc-dec{
+        display:flex;
+        flex-direction:column;
+        font-size: 25px;
+        border: 1px solid black;
+        border-radius: 200px;
+        width: 30px;
+        background: #f7f7f7;
+        border-style:none;
+    }
+    .js-img-style{
+        width:60px;
+        height:60px;
+    }
+    .js-card-body{
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    .card-money{
+        width: 74px;
+    }
+    .js-price-line{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .js-div5{
+        display: flex;
+    }
+    
+    .importantRule{
+        display: block !important;
+    }

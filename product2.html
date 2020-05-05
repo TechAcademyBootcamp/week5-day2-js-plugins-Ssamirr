@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="product2.css">
+    <title>Product</title>
+</head>
+
+<body>
+    <header>
+        <nav
+            style="padding: 20px 60px;box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px;background-color: rgb(255, 255, 255);">
+            <div class="row justify-content-between">
+                <div class="pickbazar">
+                    <img style="max-width: 150px;margin-top: 10px;cursor: pointer;"
+                        src="data:image/png;base64,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"
+                        alt="pickbazar-admin">
+                </div>
+                <div class="">
+                    <button class="buttonaddproducts"
+                        style="padding: 12px 28px; border-radius: 3px;background-color: rgb(0, 197, 141);border-style: none;">
+                        <span class="addproducts">Add Products</span>
+                    </button>
+                    <span style="cursor:pointer" class="notice"><svg id="notice" class="ml-5"
+                            xmlns="http://www.w3.org/2000/svg" width="16px" height="18px" viewBox="0 0 15.898 18">
+                            <path id="Path_2062" data-name="Path 2062"
+                                d="M3756.814,4042.745c-.321,1.887-1.279,2.844-2.816,2.832-1.495-.011-2.448-.987-2.74-2.8-.834-.14-1.684-.218-2.494-.44a7.131,7.131,0,0,1-1.956-.838,1.354,1.354,0,0,1-.333-2.139,7.716,7.716,0,0,0,1.7-4.647,16.446,16.446,0,0,1,.793-3.939,4.785,4.785,0,0,1,4.625-3.188,8.258,8.258,0,0,1,2.4.256,4.649,4.649,0,0,1,3.432,3.795c.3,1.292.441,2.62.646,3.934a7.247,7.247,0,0,0,.836,2.789,6.2,6.2,0,0,0,.573.74,1.577,1.577,0,0,1-.41,2.6,7.794,7.794,0,0,1-2.977.89C3757.661,4042.654,3757.234,4042.695,3756.814,4042.745Zm3.407-2.482a8.64,8.64,0,0,1-1.888-5.015c-.139-1.1-.309-2.195-.547-3.274a3.019,3.019,0,0,0-2.075-2.482,5.458,5.458,0,0,0-1.612-.264c-2.086.031-3.318.688-3.815,2.928-.259,1.167-.388,2.365-.561,3.55a7.6,7.6,0,0,1-1.781,4.458c-.022.023-.019.071-.026.1C3749.689,4041.453,3758.313,4041.456,3760.221,4040.263Zm-4.717,2.583h-2.94a1.47,1.47,0,1,0,2.94,0Z"
+                                transform="translate(-3746.087 -4027.577)" fill="currentColor"></path>
+                        </svg></span>
+                    <span class="ulduz"><svg class="ml-5" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                            viewBox="0 0 10 10">
+                            <g id="Group_2830" data-name="Group 2830" transform="translate(-1598 -32)">
+                                <g id="Ellipse_73" data-name="Ellipse 73" transform="translate(1598 32)" fill="#ffffff"
+                                    stroke="currentColor" stroke-width="0.3">
+                                    <circle cx="5" cy="5" r="5" stroke="none"></circle>
+                                    <circle cx="5" cy="5" r="4.85" fill="none"></circle>
+                                </g>
+                                <path id="Path_2700" data-name="Path 2700" d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0Z"
+                                    transform="translate(1601 35)" fill="currentColor"></path>
+                            </g>
+                        </svg></span>
+                    <span class="ml-5 loqo"><img id="loqo"
+                            style="height:40px;width: 40px;border-radius: 50%;cursor: pointer;"
+                            src="data:image/jpeg;base64,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"
+                            alt="user" class="ai cj"></span>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <header class="header2">
+        <nav
+            style="padding: 20px 60px;box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px;background-color: rgb(255, 255, 255);">
+            <div class="row justify-content-between">
+                <div class="pickbazar2">
+                    <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="26px" height="18px"
+                        viewBox="0 0 25.5 18">
+                        <g id="iconfinder_menu_4092560" transform="translate(-2 -6)">
+                            <path id="Path_216" data-name="Path 216"
+                                d="M26.589,6H2.911A.842.842,0,0,0,2,6.75a.842.842,0,0,0,.911.75H26.589a.842.842,0,0,0,.911-.75A.842.842,0,0,0,26.589,6Z"
+                                fill="currentColor"></path>
+                            <path id="Path_217" data-name="Path 217"
+                                d="M2.75,16.5H12.5a.75.75,0,0,0,0-1.5H2.75a.75.75,0,0,0,0,1.5Z"
+                                transform="translate(0 -0.75)" fill="currentColor"></path>
+                            <path id="Path_218" data-name="Path 218"
+                                d="M23.562,24H2.938a.769.769,0,1,0,0,1.5H23.562a.769.769,0,1,0,0-1.5Z"
+                                transform="translate(0 -1.5)" fill="currentColor"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="">
+                    <button class="buttonaddproducts"
+                        style="padding: 12px 28px; border-radius: 3px;background-color: rgb(0, 197, 141);border-style: none;">
+                        <span class="addproducts">Add Products</span>
+                    </button>
+                    <span style="cursor:pointer" class="notice"><svg id="notice" class="ml-5"
+                            xmlns="http://www.w3.org/2000/svg" width="16px" height="18px" viewBox="0 0 15.898 18">
+                            <path id="Path_2062" data-name="Path 2062"
+                                d="M3756.814,4042.745c-.321,1.887-1.279,2.844-2.816,2.832-1.495-.011-2.448-.987-2.74-2.8-.834-.14-1.684-.218-2.494-.44a7.131,7.131,0,0,1-1.956-.838,1.354,1.354,0,0,1-.333-2.139,7.716,7.716,0,0,0,1.7-4.647,16.446,16.446,0,0,1,.793-3.939,4.785,4.785,0,0,1,4.625-3.188,8.258,8.258,0,0,1,2.4.256,4.649,4.649,0,0,1,3.432,3.795c.3,1.292.441,2.62.646,3.934a7.247,7.247,0,0,0,.836,2.789,6.2,6.2,0,0,0,.573.74,1.577,1.577,0,0,1-.41,2.6,7.794,7.794,0,0,1-2.977.89C3757.661,4042.654,3757.234,4042.695,3756.814,4042.745Zm3.407-2.482a8.64,8.64,0,0,1-1.888-5.015c-.139-1.1-.309-2.195-.547-3.274a3.019,3.019,0,0,0-2.075-2.482,5.458,5.458,0,0,0-1.612-.264c-2.086.031-3.318.688-3.815,2.928-.259,1.167-.388,2.365-.561,3.55a7.6,7.6,0,0,1-1.781,4.458c-.022.023-.019.071-.026.1C3749.689,4041.453,3758.313,4041.456,3760.221,4040.263Zm-4.717,2.583h-2.94a1.47,1.47,0,1,0,2.94,0Z"
+                                transform="translate(-3746.087 -4027.577)" fill="currentColor"></path>
+                        </svg></span>
+                    <span class="ulduz"><svg class="ml-5" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                            viewBox="0 0 10 10">
+                            <g id="Group_2830" data-name="Group 2830" transform="translate(-1598 -32)">
+                                <g id="Ellipse_73" data-name="Ellipse 73" transform="translate(1598 32)" fill="#ffffff"
+                                    stroke="currentColor" stroke-width="0.3">
+                                    <circle cx="5" cy="5" r="5" stroke="none"></circle>
+                                    <circle cx="5" cy="5" r="4.85" fill="none"></circle>
+                                </g>
+                                <path id="Path_2700" data-name="Path 2700" d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0Z"
+                                    transform="translate(1601 35)" fill="currentColor"></path>
+                            </g>
+                        </svg></span>
+                    <span class="ml-5 loqo"><img id="loqo"
+                            style="height:40px;width: 40px;border-radius: 50%;cursor: pointer;"
+                            src="data:image/jpeg;base64,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"
+                            alt="user" class="ai cj"></span>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="full2" style="width: 100%; height:100%;background-color: rgba(0, 0, 0, 0.5);;position:fixed;top:0;">
+        <div class="menuheader2">
+            <div class="row">
+                <div class="solteref2" style="overflow: scroll;height: 500px;width: 95%;">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+                        <a class="nav-link leftlink1 leftside mt-5 " id="v-pills-dashboard-tab" data-toggle="pill"
+                            href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard"
+                            aria-selected="false"><svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="15px"
+                                height="15px" viewBox="0 0 15 15">
+                                <g id="Group_2583" data-name="Group 2583" transform="translate(0 0)">
+                                    <path id="Path_2129" data-name="Path 2129"
+                                        d="M1667.731,877.683a3.066,3.066,0,1,1-3.067-3.068A3.061,3.061,0,0,1,1667.731,877.683Z"
+                                        transform="translate(-1652.731 -865.747)" fill="currentColor"></path>
+                                    <path id="Path_2130" data-name="Path 2130"
+                                        d="M1471.213,874.615a3.066,3.066,0,1,1-3.072,3.064A3.06,3.06,0,0,1,1471.213,874.615Z"
+                                        transform="translate(-1468.141 -865.747)" fill="currentColor"></path>
+                                    <path id="Path_2131" data-name="Path 2131"
+                                        d="M1474.272,684.227a3.066,3.066,0,1,1-3.044-3.075A3.063,3.063,0,0,1,1474.272,684.227Z"
+                                        transform="translate(-1468.14 -681.152)" fill="currentColor"></path>
+                                    <path id="Path_2132" data-name="Path 2132"
+                                        d="M1674.436,691.284q0,1.143,0,2.286c0,.335-.107.441-.443.441h-4.572c-.326,0-.438-.108-.438-.43q0-2.295,0-4.589c0-.323.111-.433.435-.433h4.572c.344,0,.445.105.446.455Q1674.436,690.149,1674.436,691.284Z"
+                                        transform="translate(-1659.775 -688.219)" fill="currentColor"></path>
+                                </g>
+                            </svg>Dashboard</a>
+                        <a class="nav-link leftlink active leftside" id="v-pills-products-tab" data-toggle="pill"
+                            href="#v-pills-products" role="tab" aria-controls="v-pills-products"
+                            aria-selected="true"><svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16px"
+                                height="13px" viewBox="0 0 15.6 13">
+                                <path id="Path_154" data-name="Path 154"
+                                    d="M299.593,418.656l-3.148-4.494a.9.9,0,0,0-.572-.272.658.658,0,0,0-.573.272l-3.148,4.494h-3.435a.66.66,0,0,0-.716.677v.207l1.789,6.327a1.448,1.448,0,0,0,1.36,1.023h9.3a1.366,1.366,0,0,0,1.359-1.023l1.789-6.327v-.207a.659.659,0,0,0-.716-.677Zm-5.87,0,2.149-3,2.145,3Zm2.149,5.443a1.362,1.362,0,1,1,1.428-1.363,1.4,1.4,0,0,1-1.428,1.363Zm0,0"
+                                    transform="translate(-288 -413.89)" fill="currentColor"></path>
+                            </svg>Products</a>
+                        <a class="nav-link leftlink leftside" id="v-pills-category-tab" data-toggle="pill"
+                            href="#v-pills-category" role="tab" aria-controls="v-pills-category"
+                            aria-selected="false"><svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="13px"
+                                height="13px" viewBox="0 0 12.958 13">
+                                <path id="Path_321" data-name="Path 321"
+                                    d="M1.015,10.3,1,4.388a.4.4,0,0,1,.564-.373l5.379,2.3a.4.4,0,0,1,.246.371L7.2,12.594a.4.4,0,0,1-.564.373l-5.379-2.3A.4.4,0,0,1,1.015,10.3Zm12.323-5.63L8.375,6.816l.013,5.468,4.963-2.15-.013-5.468m.2-.713a.405.405,0,0,1,.405.4l.014,5.908a.4.4,0,0,1-.244.372L8.347,12.963a.4.4,0,0,1-.565-.37L7.768,6.684a.4.4,0,0,1,.244-.372l5.368-2.325a.4.4,0,0,1,.16-.034ZM7.44.626l-5.149,2.3L7.451,5.2,12.6,2.9,7.44.626m0-.626A.4.4,0,0,1,7.6.034l5.659,2.495a.4.4,0,0,1,0,.74L7.617,5.79a.4.4,0,0,1-.328,0L1.63,3.3a.4.4,0,0,1,0-.74L7.275.035A.4.4,0,0,1,7.439,0Z"
+                                    transform="translate(-1.001)" fill="currentColor"></path>
+                            </svg>Category</a>
+                        <a class="nav-link leftlink leftside" id="v-pills-orders-tab" data-toggle="pill"
+                            href="#v-pills-orders" role="tab" aria-controls="v-pills-orders" aria-selected="false"><svg
+                                class="mr-3" xmlns="http://www.w3.org/2000/svg" width="11px" height="13px"
+                                viewBox="0 0 11.321 13">
+                                <g id="Group_1087" data-name="Group 1087" transform="translate(0)">
+                                    <g id="Group_1086" data-name="Group 1086">
+                                        <path id="Path_322" data-name="Path 322"
+                                            d="M274.867.365A.733.733,0,0,0,274.234,0h-2.718V3.215h5Z"
+                                            transform="translate(-265.461)" fill="currentColor"></path>
+                                        <path id="Path_323" data-name="Path 323"
+                                            d="M48.821,0H46.077a.733.733,0,0,0-.633.366L43.8,3.215h5.02V0Z"
+                                            transform="translate(-43.528)" fill="currentColor"></path>
+                                        <path id="Path_324" data-name="Path 324"
+                                            d="M33.057,156.648v8.127a.9.9,0,0,0,.9.9h9.529a.9.9,0,0,0,.9-.9v-8.127Zm7.39,3.418-1.971,1.971a.38.38,0,0,1-.539,0l-.924-.924a.381.381,0,1,1,.539-.539l.654.654,1.7-1.7a.381.381,0,1,1,.539.539Z"
+                                            transform="translate(-33.057 -152.671)" fill="currentColor"></path>
+                                    </g>
+                                </g>
+                            </svg>Orders</a>
+                        <a class="nav-link leftlink leftside" id="v-pills-customers-tab" data-toggle="pill"
+                            href="#v-pills-customers" role="tab" aria-controls="v-pills-customers"
+                            aria-selected="false"><svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="12.5px"
+                                height="13px" viewBox="0 0 12.489 13">
+                                <g id="group_1_" data-name="group (1)" transform="translate(0)">
+                                    <path id="Path_327" data-name="Path 327"
+                                        d="M43.356,2.708a.328.328,0,0,0,.459-.062,5.053,5.053,0,0,1,8.04,0,.328.328,0,1,0,.521-.4,5.708,5.708,0,0,0-9.081,0A.328.328,0,0,0,43.356,2.708Z"
+                                        transform="translate(-41.591)" fill="currentColor"></path>
+                                    <path id="Path_328" data-name="Path 328"
+                                        d="M228.037,79.44a1.023,1.023,0,1,0,1.023-1.023A1.024,1.024,0,0,0,228.037,79.44Z"
+                                        transform="translate(-218.311 -74.985)" fill="currentColor"></path>
+                                    <path id="Path_329" data-name="Path 329"
+                                        d="M214.438,130.872l-.26-.08a.306.306,0,0,0-.273.048l-.514.385-.514-.385a.306.306,0,0,0-.273-.048l-.26.08a1.013,1.013,0,0,0-.693.962v1.546a.3.3,0,0,0,.05.168l.519.789v2.073a.306.306,0,0,0,.306.306h1.731a.306.306,0,0,0,.306-.306v-2.073l.519-.789a.305.305,0,0,0,.05-.168v-1.546A1.013,1.013,0,0,0,214.438,130.872Z"
+                                        transform="translate(-202.642 -125.054)" fill="currentColor"></path>
+                                    <path id="Path_330" data-name="Path 330"
+                                        d="M23.247,80.463a1.023,1.023,0,1,0-1.023-1.023A1.024,1.024,0,0,0,23.247,80.463Z"
+                                        transform="translate(-21.507 -74.985)" fill="currentColor"></path>
+                                    <path id="Path_331" data-name="Path 331"
+                                        d="M8.626,130.872l-.26-.08a.306.306,0,0,0-.273.048l-.514.385-.514-.385a.306.306,0,0,0-.273-.048l-.26.08a1.013,1.013,0,0,0-.693.962v1.546a.3.3,0,0,0,.05.168l.519.789v2.073a.306.306,0,0,0,.306.306H8.445a.306.306,0,0,0,.306-.306v-2.073l.519-.789a.305.305,0,0,0,.05-.168v-1.546A1.013,1.013,0,0,0,8.626,130.872Z"
+                                        transform="translate(-5.839 -125.054)" fill="currentColor"></path>
+                                    <path id="Path_332" data-name="Path 332"
+                                        d="M121,40.028a1.319,1.319,0,1,0-1.319,1.319A1.321,1.321,0,0,0,121,40.028Z"
+                                        transform="translate(-113.433 -37.015)" fill="currentColor"></path>
+                                    <path id="Path_333" data-name="Path 333"
+                                        d="M100.82,110.947h0l-.377-.116a.117.117,0,0,0-.144.072l-.792,2.173a.143.143,0,0,1-.269,0l-.792-2.173a.117.117,0,0,0-.11-.077c-.011,0-.411.121-.411.121a1.169,1.169,0,0,0-.8,1.11v2.3a.117.117,0,0,0,.019.064l.826,1.257v3.181a.117.117,0,0,0,.117.117h2.573a.117.117,0,0,0,.117-.117v-3.181l.826-1.257a.117.117,0,0,0,.019-.064v-2.3A1.161,1.161,0,0,0,100.82,110.947Z"
+                                        transform="translate(-93.126 -105.975)" fill="currentColor"></path>
+                                    <path id="Path_334" data-name="Path 334"
+                                        d="M141.079,111.386a.174.174,0,0,0-.129-.054h-.361a.174.174,0,0,0-.129.054.167.167,0,0,0-.022.2l.193.291-.09.762.178.473a.054.054,0,0,0,.1,0l.178-.473-.09-.762.193-.291A.167.167,0,0,0,141.079,111.386Z"
+                                        transform="translate(-134.525 -106.459)" fill="currentColor"></path>
+                                </g>
+                            </svg>Customers</a>
+                        <a class="nav-link leftlink leftside" id="v-pills-coupons-tab" data-toggle="pill"
+                            href="#v-pills-coupons" role="tab" aria-controls="v-pills-coupons"
+                            aria-selected="false"><svg class="mr-3" id="Group_2930" data-name="Group 2930"
+                                xmlns="http://www.w3.org/2000/svg" width="11px" height="13px" viewBox="0 0 11.426 13">
+                                <g id="voucher">
+                                    <path id="Path_3616" data-name="Path 3616"
+                                        d="M116.344,226.9a1.513,1.513,0,0,0-.27.027l-.982-1.113,1.958-2.219a1.526,1.526,0,0,0-.135-2.15l-2.839,3.218,0,0-.632.716h-.769l.386.439-.984,1.115a1.523,1.523,0,1,0,1.222,1.493,1.5,1.5,0,0,0-.085-.478l.862-.977.839.952a1.5,1.5,0,0,0-.093.5,1.523,1.523,0,1,0,1.523-1.523Zm-4.57,2.285a.762.762,0,1,1,.762-.762A.764.764,0,0,1,111.774,229.182Zm4.57,0a.762.762,0,1,1,.762-.762A.764.764,0,0,1,116.344,229.182Zm0,0"
+                                        transform="translate(-107.965 -216.944)" fill="currentColor"></path>
+                                    <path id="Path_3617" data-name="Path 3617"
+                                        d="M4.605,0V1.574H3.844V0H-2.25V7.668H2.884l.96-1.089v-1.2h.762v.335L6.632,3.425l.571.5A2.287,2.287,0,0,1,7.409,7.15l-.457.518H9.176V0ZM1.178,3.479A1.141,1.141,0,0,1,1.559,5.7v.8H.8V5.7A1.139,1.139,0,0,1,.035,4.621H.8a.381.381,0,1,0,.381-.381A1.141,1.141,0,0,1,.8,2.024v-.83h.762v.83A1.139,1.139,0,0,1,2.32,3.1H1.559a.381.381,0,1,0-.381.381ZM4.605,4.621H3.844V3.859h.762Zm0-1.523H3.844V2.336h.762Zm0,0"
+                                        transform="translate(2.25)" fill="currentColor"></path>
+                                </g>
+                            </svg>Coupons</a>
+                        <a class="nav-link leftlink leftside" id="v-pills-settings-tab" data-toggle="pill"
+                            href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                            aria-selected="false"><svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="13px"
+                                height="13px" viewBox="0 0 13 13">
+                                <path id="_005-repairing-service" data-name="005-repairing-service"
+                                    d="M12.961,5.778a.423.423,0,0,0-.418-.32,1.435,1.435,0,0,1-.982-2.5.361.361,0,0,0,.04-.49,6.435,6.435,0,0,0-1.03-1.04.362.362,0,0,0-.494.04,1.5,1.5,0,0,1-1.621.364A1.444,1.444,0,0,1,7.577.422a.361.361,0,0,0-.319-.38A6.487,6.487,0,0,0,5.8.039a.362.362,0,0,0-.322.372A1.446,1.446,0,0,1,4.584,1.8a1.5,1.5,0,0,1-1.609-.367.362.362,0,0,0-.491-.041,6.462,6.462,0,0,0-1.051,1.04.362.362,0,0,0,.039.494,1.44,1.44,0,0,1,.363,1.622,1.5,1.5,0,0,1-1.414.879.354.354,0,0,0-.376.319,6.516,6.516,0,0,0,0,1.478.43.43,0,0,0,.426.32,1.426,1.426,0,0,1,1.338.891,1.446,1.446,0,0,1-.364,1.607.361.361,0,0,0-.039.49,6.458,6.458,0,0,0,1.028,1.04.361.361,0,0,0,.495-.039,1.5,1.5,0,0,1,1.62-.364,1.442,1.442,0,0,1,.88,1.411.361.361,0,0,0,.319.38,6.472,6.472,0,0,0,1.462,0,.362.362,0,0,0,.322-.372,1.445,1.445,0,0,1,.89-1.386,1.5,1.5,0,0,1,1.61.366.363.363,0,0,0,.491.041,6.47,6.47,0,0,0,1.051-1.04.361.361,0,0,0-.039-.494,1.44,1.44,0,0,1-.364-1.621,1.455,1.455,0,0,1,1.33-.881l.08,0a.362.362,0,0,0,.38-.319A6.487,6.487,0,0,0,12.961,5.778ZM6.5,10.247A3.747,3.747,0,1,1,9.719,8.421L8.078,6.78A2.3,2.3,0,0,0,5.356,3.666a.26.26,0,0,0-.18.181.254.254,0,0,0,.072.248s.81.816,1.081,1.087a.168.168,0,0,1,.024.121l0,.018a5.181,5.181,0,0,1-.123.793l-.017.017-.018.018a5.107,5.107,0,0,1-.805.125v0l-.014,0H5.361a.173.173,0,0,1-.125-.053c-.282-.282-1.06-1.055-1.06-1.055a.265.265,0,0,0-.189-.084.257.257,0,0,0-.242.2A2.3,2.3,0,0,0,6.859,8L8.518,9.657A3.728,3.728,0,0,1,6.5,10.247Z"
+                                    transform="translate(-0.002 0.001)" fill="currentColor"></path>
+                            </svg>Settings</a>
+
+
+
+                        <a class="nav-link leftlink leftside" id="v-pills-logout-tab" data-toggle="pill"
+                            href="#v-pills-logout" role="tab" aria-controls="v-pills-logout" aria-selected="false"><svg
+                                class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16px" height="13px"
+                                viewBox="0 0 15.999 13">
+                                <defs>
+                                    <filter id="Path_319" x="4.583" y="1.792" width="11.416" height="10.333"
+                                        filterUnits="userSpaceOnUse">
+                                        <feGaussianBlur stdDeviation="1" result="blur"></feGaussianBlur>
+                                        <feFlood flood-opacity="0.161"></feFlood>
+                                        <feComposite operator="in" in2="blur"></feComposite>
+                                        <feComposite in="SourceGraphic"></feComposite>
+                                    </filter>
+                                </defs>
+                                <g id="_007-logout" data-name="007-logout" transform="translate(0)">
+                                    <g id="Group_1075" data-name="Group 1075">
+                                        <g id="Group_1074" data-name="Group 1074" transform="translate(0)">
+                                            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_319)">
+                                                <path id="Path_319-2" data-name="Path 319"
+                                                    d="M304.055,151.3a.547.547,0,0,0-.118-.177l-1.624-1.624a.542.542,0,0,0-.766.766l.7.7h-3.026a.542.542,0,1,0,0,1.083h3.026l-.7.7a.542.542,0,1,0,.766.766l1.624-1.624a.536.536,0,0,0,.118-.177A.542.542,0,0,0,304.055,151.3Z"
+                                                    transform="translate(-291.1 -145.55)" fill="currentColor"></path>
+                                            </g>
+                                            <path id="Path_320" data-name="Path 320"
+                                                d="M9.222,7.583a.542.542,0,0,0-.542.542v2.708H6.514V2.167a.542.542,0,0,0-.386-.519L4.247,1.083H8.681V3.792a.542.542,0,0,0,1.083,0V.542A.542.542,0,0,0,9.222,0H.556A.483.483,0,0,0,.5.01.535.535,0,0,0,.27.09C.258.1.244.1.232.107S.226.116.222.12A.537.537,0,0,0,.078.291.442.442,0,0,0,.063.336.514.514,0,0,0,.02.463a.337.337,0,0,0,0,.047C.021.521.014.531.014.542V11.375a.541.541,0,0,0,.435.531l5.417,1.083A.5.5,0,0,0,5.972,13a.542.542,0,0,0,.542-.542v-.542H9.222a.542.542,0,0,0,.542-.542V8.125A.542.542,0,0,0,9.222,7.583Z"
+                                                transform="translate(-0.014)" fill="currentColor"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="solteref">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+                <a class="nav-link leftlink1 leftside " id="v-pills-dashboard-tab" data-toggle="pill"
+                    href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="false"><svg
+                        class="mr-3" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+                        <g id="Group_2583" data-name="Group 2583" transform="translate(0 0)">
+                            <path id="Path_2129" data-name="Path 2129"
+                                d="M1667.731,877.683a3.066,3.066,0,1,1-3.067-3.068A3.061,3.061,0,0,1,1667.731,877.683Z"
+                                transform="translate(-1652.731 -865.747)" fill="currentColor"></path>
+                            <path id="Path_2130" data-name="Path 2130"
+                                d="M1471.213,874.615a3.066,3.066,0,1,1-3.072,3.064A3.06,3.06,0,0,1,1471.213,874.615Z"
+                                transform="translate(-1468.141 -865.747)" fill="currentColor"></path>
+                            <path id="Path_2131" data-name="Path 2131"
+                                d="M1474.272,684.227a3.066,3.066,0,1,1-3.044-3.075A3.063,3.063,0,0,1,1474.272,684.227Z"
+                                transform="translate(-1468.14 -681.152)" fill="currentColor"></path>
+                            <path id="Path_2132" data-name="Path 2132"
+                                d="M1674.436,691.284q0,1.143,0,2.286c0,.335-.107.441-.443.441h-4.572c-.326,0-.438-.108-.438-.43q0-2.295,0-4.589c0-.323.111-.433.435-.433h4.572c.344,0,.445.105.446.455Q1674.436,690.149,1674.436,691.284Z"
+                                transform="translate(-1659.775 -688.219)" fill="currentColor"></path>
+                        </g>
+                    </svg>Dashboard</a>
+                <a class="nav-link leftlink active leftside" id="v-pills-products-tab" data-toggle="pill"
+                    href="#v-pills-products" role="tab" aria-controls="v-pills-products" aria-selected="true"><svg
+                        class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16px" height="13px"
+                        viewBox="0 0 15.6 13">
+                        <path id="Path_154" data-name="Path 154"
+                            d="M299.593,418.656l-3.148-4.494a.9.9,0,0,0-.572-.272.658.658,0,0,0-.573.272l-3.148,4.494h-3.435a.66.66,0,0,0-.716.677v.207l1.789,6.327a1.448,1.448,0,0,0,1.36,1.023h9.3a1.366,1.366,0,0,0,1.359-1.023l1.789-6.327v-.207a.659.659,0,0,0-.716-.677Zm-5.87,0,2.149-3,2.145,3Zm2.149,5.443a1.362,1.362,0,1,1,1.428-1.363,1.4,1.4,0,0,1-1.428,1.363Zm0,0"
+                            transform="translate(-288 -413.89)" fill="currentColor"></path>
+                    </svg>Products</a>
+                <a class="nav-link leftlink leftside" id="v-pills-category-tab" data-toggle="pill"
+                    href="#v-pills-category" role="tab" aria-controls="v-pills-category" aria-selected="false"><svg
+                        class="mr-3" xmlns="http://www.w3.org/2000/svg" width="13px" height="13px"
+                        viewBox="0 0 12.958 13">
+                        <path id="Path_321" data-name="Path 321"
+                            d="M1.015,10.3,1,4.388a.4.4,0,0,1,.564-.373l5.379,2.3a.4.4,0,0,1,.246.371L7.2,12.594a.4.4,0,0,1-.564.373l-5.379-2.3A.4.4,0,0,1,1.015,10.3Zm12.323-5.63L8.375,6.816l.013,5.468,4.963-2.15-.013-5.468m.2-.713a.405.405,0,0,1,.405.4l.014,5.908a.4.4,0,0,1-.244.372L8.347,12.963a.4.4,0,0,1-.565-.37L7.768,6.684a.4.4,0,0,1,.244-.372l5.368-2.325a.4.4,0,0,1,.16-.034ZM7.44.626l-5.149,2.3L7.451,5.2,12.6,2.9,7.44.626m0-.626A.4.4,0,0,1,7.6.034l5.659,2.495a.4.4,0,0,1,0,.74L7.617,5.79a.4.4,0,0,1-.328,0L1.63,3.3a.4.4,0,0,1,0-.74L7.275.035A.4.4,0,0,1,7.439,0Z"
+                            transform="translate(-1.001)" fill="currentColor"></path>
+                    </svg>Category</a>
+                <a class="nav-link leftlink leftside" id="v-pills-orders-tab" data-toggle="pill" href="#v-pills-orders"
+                    role="tab" aria-controls="v-pills-orders" aria-selected="false"><svg class="mr-3"
+                        xmlns="http://www.w3.org/2000/svg" width="11px" height="13px" viewBox="0 0 11.321 13">
+                        <g id="Group_1087" data-name="Group 1087" transform="translate(0)">
+                            <g id="Group_1086" data-name="Group 1086">
+                                <path id="Path_322" data-name="Path 322"
+                                    d="M274.867.365A.733.733,0,0,0,274.234,0h-2.718V3.215h5Z"
+                                    transform="translate(-265.461)" fill="currentColor"></path>
+                                <path id="Path_323" data-name="Path 323"
+                                    d="M48.821,0H46.077a.733.733,0,0,0-.633.366L43.8,3.215h5.02V0Z"
+                                    transform="translate(-43.528)" fill="currentColor"></path>
+                                <path id="Path_324" data-name="Path 324"
+                                    d="M33.057,156.648v8.127a.9.9,0,0,0,.9.9h9.529a.9.9,0,0,0,.9-.9v-8.127Zm7.39,3.418-1.971,1.971a.38.38,0,0,1-.539,0l-.924-.924a.381.381,0,1,1,.539-.539l.654.654,1.7-1.7a.381.381,0,1,1,.539.539Z"
+                                    transform="translate(-33.057 -152.671)" fill="currentColor"></path>
+                            </g>
+                        </g>
+                    </svg>Orders</a>
+                <a class="nav-link leftlink leftside" id="v-pills-customers-tab" data-toggle="pill"
+                    href="#v-pills-customers" role="tab" aria-controls="v-pills-customers" aria-selected="false"><svg
+                        class="mr-3" xmlns="http://www.w3.org/2000/svg" width="12.5px" height="13px"
+                        viewBox="0 0 12.489 13">
+                        <g id="group_1_" data-name="group (1)" transform="translate(0)">
+                            <path id="Path_327" data-name="Path 327"
+                                d="M43.356,2.708a.328.328,0,0,0,.459-.062,5.053,5.053,0,0,1,8.04,0,.328.328,0,1,0,.521-.4,5.708,5.708,0,0,0-9.081,0A.328.328,0,0,0,43.356,2.708Z"
+                                transform="translate(-41.591)" fill="currentColor"></path>
+                            <path id="Path_328" data-name="Path 328"
+                                d="M228.037,79.44a1.023,1.023,0,1,0,1.023-1.023A1.024,1.024,0,0,0,228.037,79.44Z"
+                                transform="translate(-218.311 -74.985)" fill="currentColor"></path>
+                            <path id="Path_329" data-name="Path 329"
+                                d="M214.438,130.872l-.26-.08a.306.306,0,0,0-.273.048l-.514.385-.514-.385a.306.306,0,0,0-.273-.048l-.26.08a1.013,1.013,0,0,0-.693.962v1.546a.3.3,0,0,0,.05.168l.519.789v2.073a.306.306,0,0,0,.306.306h1.731a.306.306,0,0,0,.306-.306v-2.073l.519-.789a.305.305,0,0,0,.05-.168v-1.546A1.013,1.013,0,0,0,214.438,130.872Z"
+                                transform="translate(-202.642 -125.054)" fill="currentColor"></path>
+                            <path id="Path_330" data-name="Path 330"
+                                d="M23.247,80.463a1.023,1.023,0,1,0-1.023-1.023A1.024,1.024,0,0,0,23.247,80.463Z"
+                                transform="translate(-21.507 -74.985)" fill="currentColor"></path>
+                            <path id="Path_331" data-name="Path 331"
+                                d="M8.626,130.872l-.26-.08a.306.306,0,0,0-.273.048l-.514.385-.514-.385a.306.306,0,0,0-.273-.048l-.26.08a1.013,1.013,0,0,0-.693.962v1.546a.3.3,0,0,0,.05.168l.519.789v2.073a.306.306,0,0,0,.306.306H8.445a.306.306,0,0,0,.306-.306v-2.073l.519-.789a.305.305,0,0,0,.05-.168v-1.546A1.013,1.013,0,0,0,8.626,130.872Z"
+                                transform="translate(-5.839 -125.054)" fill="currentColor"></path>
+                            <path id="Path_332" data-name="Path 332"
+                                d="M121,40.028a1.319,1.319,0,1,0-1.319,1.319A1.321,1.321,0,0,0,121,40.028Z"
+                                transform="translate(-113.433 -37.015)" fill="currentColor"></path>
+                            <path id="Path_333" data-name="Path 333"
+                                d="M100.82,110.947h0l-.377-.116a.117.117,0,0,0-.144.072l-.792,2.173a.143.143,0,0,1-.269,0l-.792-2.173a.117.117,0,0,0-.11-.077c-.011,0-.411.121-.411.121a1.169,1.169,0,0,0-.8,1.11v2.3a.117.117,0,0,0,.019.064l.826,1.257v3.181a.117.117,0,0,0,.117.117h2.573a.117.117,0,0,0,.117-.117v-3.181l.826-1.257a.117.117,0,0,0,.019-.064v-2.3A1.161,1.161,0,0,0,100.82,110.947Z"
+                                transform="translate(-93.126 -105.975)" fill="currentColor"></path>
+                            <path id="Path_334" data-name="Path 334"
+                                d="M141.079,111.386a.174.174,0,0,0-.129-.054h-.361a.174.174,0,0,0-.129.054.167.167,0,0,0-.022.2l.193.291-.09.762.178.473a.054.054,0,0,0,.1,0l.178-.473-.09-.762.193-.291A.167.167,0,0,0,141.079,111.386Z"
+                                transform="translate(-134.525 -106.459)" fill="currentColor"></path>
+                        </g>
+                    </svg>Customers</a>
+                <a class="nav-link leftlink leftside" id="v-pills-coupons-tab" data-toggle="pill"
+                    href="#v-pills-coupons" role="tab" aria-controls="v-pills-coupons" aria-selected="false"><svg
+                        class="mr-3" id="Group_2930" data-name="Group 2930" xmlns="http://www.w3.org/2000/svg"
+                        width="11px" height="13px" viewBox="0 0 11.426 13">
+                        <g id="voucher">
+                            <path id="Path_3616" data-name="Path 3616"
+                                d="M116.344,226.9a1.513,1.513,0,0,0-.27.027l-.982-1.113,1.958-2.219a1.526,1.526,0,0,0-.135-2.15l-2.839,3.218,0,0-.632.716h-.769l.386.439-.984,1.115a1.523,1.523,0,1,0,1.222,1.493,1.5,1.5,0,0,0-.085-.478l.862-.977.839.952a1.5,1.5,0,0,0-.093.5,1.523,1.523,0,1,0,1.523-1.523Zm-4.57,2.285a.762.762,0,1,1,.762-.762A.764.764,0,0,1,111.774,229.182Zm4.57,0a.762.762,0,1,1,.762-.762A.764.764,0,0,1,116.344,229.182Zm0,0"
+                                transform="translate(-107.965 -216.944)" fill="currentColor"></path>
+                            <path id="Path_3617" data-name="Path 3617"
+                                d="M4.605,0V1.574H3.844V0H-2.25V7.668H2.884l.96-1.089v-1.2h.762v.335L6.632,3.425l.571.5A2.287,2.287,0,0,1,7.409,7.15l-.457.518H9.176V0ZM1.178,3.479A1.141,1.141,0,0,1,1.559,5.7v.8H.8V5.7A1.139,1.139,0,0,1,.035,4.621H.8a.381.381,0,1,0,.381-.381A1.141,1.141,0,0,1,.8,2.024v-.83h.762v.83A1.139,1.139,0,0,1,2.32,3.1H1.559a.381.381,0,1,0-.381.381ZM4.605,4.621H3.844V3.859h.762Zm0-1.523H3.844V2.336h.762Zm0,0"
+                                transform="translate(2.25)" fill="currentColor"></path>
+                        </g>
+                    </svg>Coupons</a>
+                <a class="nav-link leftlink leftside" id="v-pills-settings-tab" data-toggle="pill"
+                    href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><svg
+                        class="mr-3" xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 13 13">
+                        <path id="_005-repairing-service" data-name="005-repairing-service"
+                            d="M12.961,5.778a.423.423,0,0,0-.418-.32,1.435,1.435,0,0,1-.982-2.5.361.361,0,0,0,.04-.49,6.435,6.435,0,0,0-1.03-1.04.362.362,0,0,0-.494.04,1.5,1.5,0,0,1-1.621.364A1.444,1.444,0,0,1,7.577.422a.361.361,0,0,0-.319-.38A6.487,6.487,0,0,0,5.8.039a.362.362,0,0,0-.322.372A1.446,1.446,0,0,1,4.584,1.8a1.5,1.5,0,0,1-1.609-.367.362.362,0,0,0-.491-.041,6.462,6.462,0,0,0-1.051,1.04.362.362,0,0,0,.039.494,1.44,1.44,0,0,1,.363,1.622,1.5,1.5,0,0,1-1.414.879.354.354,0,0,0-.376.319,6.516,6.516,0,0,0,0,1.478.43.43,0,0,0,.426.32,1.426,1.426,0,0,1,1.338.891,1.446,1.446,0,0,1-.364,1.607.361.361,0,0,0-.039.49,6.458,6.458,0,0,0,1.028,1.04.361.361,0,0,0,.495-.039,1.5,1.5,0,0,1,1.62-.364,1.442,1.442,0,0,1,.88,1.411.361.361,0,0,0,.319.38,6.472,6.472,0,0,0,1.462,0,.362.362,0,0,0,.322-.372,1.445,1.445,0,0,1,.89-1.386,1.5,1.5,0,0,1,1.61.366.363.363,0,0,0,.491.041,6.47,6.47,0,0,0,1.051-1.04.361.361,0,0,0-.039-.494,1.44,1.44,0,0,1-.364-1.621,1.455,1.455,0,0,1,1.33-.881l.08,0a.362.362,0,0,0,.38-.319A6.487,6.487,0,0,0,12.961,5.778ZM6.5,10.247A3.747,3.747,0,1,1,9.719,8.421L8.078,6.78A2.3,2.3,0,0,0,5.356,3.666a.26.26,0,0,0-.18.181.254.254,0,0,0,.072.248s.81.816,1.081,1.087a.168.168,0,0,1,.024.121l0,.018a5.181,5.181,0,0,1-.123.793l-.017.017-.018.018a5.107,5.107,0,0,1-.805.125v0l-.014,0H5.361a.173.173,0,0,1-.125-.053c-.282-.282-1.06-1.055-1.06-1.055a.265.265,0,0,0-.189-.084.257.257,0,0,0-.242.2A2.3,2.3,0,0,0,6.859,8L8.518,9.657A3.728,3.728,0,0,1,6.5,10.247Z"
+                            transform="translate(-0.002 0.001)" fill="currentColor"></path>
+                    </svg>Settings</a>
+
+
+
+                <a class="nav-link leftlink leftside" id="v-pills-logout-tab" data-toggle="pill" href="#v-pills-logout"
+                    role="tab" aria-controls="v-pills-logout" aria-selected="false"><svg class="mr-3"
+                        xmlns="http://www.w3.org/2000/svg" width="16px" height="13px" viewBox="0 0 15.999 13">
+                        <defs>
+                            <filter id="Path_319" x="4.583" y="1.792" width="11.416" height="10.333"
+                                filterUnits="userSpaceOnUse">
+                                <feGaussianBlur stdDeviation="1" result="blur"></feGaussianBlur>
+                                <feFlood flood-opacity="0.161"></feFlood>
+                                <feComposite operator="in" in2="blur"></feComposite>
+                                <feComposite in="SourceGraphic"></feComposite>
+                            </filter>
+                        </defs>
+                        <g id="_007-logout" data-name="007-logout" transform="translate(0)">
+                            <g id="Group_1075" data-name="Group 1075">
+                                <g id="Group_1074" data-name="Group 1074" transform="translate(0)">
+                                    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_319)">
+                                        <path id="Path_319-2" data-name="Path 319"
+                                            d="M304.055,151.3a.547.547,0,0,0-.118-.177l-1.624-1.624a.542.542,0,0,0-.766.766l.7.7h-3.026a.542.542,0,1,0,0,1.083h3.026l-.7.7a.542.542,0,1,0,.766.766l1.624-1.624a.536.536,0,0,0,.118-.177A.542.542,0,0,0,304.055,151.3Z"
+                                            transform="translate(-291.1 -145.55)" fill="currentColor"></path>
+                                    </g>
+                                    <path id="Path_320" data-name="Path 320"
+                                        d="M9.222,7.583a.542.542,0,0,0-.542.542v2.708H6.514V2.167a.542.542,0,0,0-.386-.519L4.247,1.083H8.681V3.792a.542.542,0,0,0,1.083,0V.542A.542.542,0,0,0,9.222,0H.556A.483.483,0,0,0,.5.01.535.535,0,0,0,.27.09C.258.1.244.1.232.107S.226.116.222.12A.537.537,0,0,0,.078.291.442.442,0,0,0,.063.336.514.514,0,0,0,.02.463a.337.337,0,0,0,0,.047C.021.521.014.531.014.542V11.375a.541.541,0,0,0,.435.531l5.417,1.083A.5.5,0,0,0,5.972,13a.542.542,0,0,0,.542-.542v-.542H9.222a.542.542,0,0,0,.542-.542V8.125A.542.542,0,0,0,9.222,7.583Z"
+                                        transform="translate(-0.014)" fill="currentColor"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>Log out</a>
+            </div>
+        </div>
+
+        <div class="sagteref" style="background: rgb(247, 247, 247);">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade " id="v-pills-dashboard" role="tabpanel"
+                    aria-labelledby="v-pills-dashboard-tab">
+                </div>
+                <div class="tab-pane fade show active" id="v-pills-products" role="tabpanel"
+                    aria-labelledby="v-pills-products-tab">
+                    <div class="row p-4">
+                        <div class="sagterefscroll col-12 px-4" style="overflow-y: scroll;height: 550px;">
+                            <div class="row m-0 mb-3 p-4" style="background-color: white;">
+                                <div class="col-12">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-md-2 mproduct mb-2 mb-md-0  ">Products</div>
+                                        <div class="col-12 col-md-10 mrow">
+                                            <div class="row mrow2">
+
+                                                <div class=" col-12 col-md-3 nav-item dropdown mb-2 mb-md-0">
+                                                    <a class="okh text-truncate mcategory samecolor nav-link dropdown-toggle"
+                                                        data-toggle="dropdown" href="#" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">Category
+                                                        Type</a>
+
+                                                    <div class="dropdown-menu categorylist">
+                                                        <a class="dropdown-item item" href="#">Grocery</a>
+                                                        <a class="dropdown-item item" href="#">Women Clothes</a>
+                                                        <a class="dropdown-item item" href="#">Bags</a>
+                                                        <a class="dropdown-item item" href="#">Make up</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-3 nav-item dropdown mb-2 mb-md-0">
+                                                    <a class="okh text-truncate  nav-link samecolor dropdown-toggle"
+                                                        data-toggle="dropdown" href="#" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">Price</a>
+                                                    <div class="dropdown-menu categorylist">
+                                                        <a class="dropdown-item item" href="#">Highest to Lowest</a>
+                                                        <a class="dropdown-item item" href="#">Lowest to Highest</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <input class="text-truncate mplace w-100"
+                                                        style="border-style: none;background:rgb(235, 232, 232);padding:7px 111px 7px 18px;"
+                                                        type="text" placeholder="Ex: Search By Name">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row picturess">
+                               
+                                <!-- <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/Raymond.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Raymond</h6>
+                                            <h6 class="cardlb">1 pc(s)</h6>
+                                            <p class="cardmoney"> $80</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/hershey_symphony.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Hershey Symphony</h6>
+                                            <h6 class="cardlb">0.1 lb</h6>
+                                            <p class="cardmoney">$3.2</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/garlic.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Garlic</h6>
+                                            <h6 class="cardlb">15 lb</h6>
+                                            <p class="cardmoney">$4</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/pet_accessories_costume1.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Batman Cap</h6>
+                                            <h6 class="cardlb">1 pc(s)</h6>
+                                            <p class="cardmoney">$3</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/dishwasher_dawn_la_faune.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Dawn</h6>
+                                            <h6 class="cardlb">1 pc(s)</h6>
+                                            <p class="cardmoney">$4.5</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/tropicana_apple.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Tropicana Apple</h6>
+                                            <h6 class="cardlb">1 ltr</h6>
+                                            <p class="cardmoney">$2.4</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/Ricki's.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Ricki S</h6>
+                                            <h6 class="cardlb">1 pc(s)</h6>
+                                            <p class="cardmoney">$145</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/pineapple.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Pineapple</h6>
+                                            <h6 class="cardlb">1 pc(s)</h6>
+                                            <p class="cardmoney">$20</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/Monster.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Monster Energy</h6>
+                                            <h6 class="cardlb">500 ml</h6>
+                                            <p class="cardmoney">$1.8</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/powder_milk_milgro.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">Milgro</h6>
+                                            <h6 class="cardlb">2 lb</h6>
+                                            <p class="cardmoney">$4.5</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
+                                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                                        style="width: 13rem;">
+                                        <img class=" shekil" style="height: 220px;"
+                                            src="http://s3.amazonaws.com/redqteam.com/pickbazar/dee5eb09-4cd1-4f14-8407-6c9c5e17485a1553259228027-1.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h6 class="cardname">ABC Glitter</h6>
+                                            <h6 class="cardlb">1 pc</h6>
+                                            <p class="cardmoney">$20</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div> -->
+
+                            </div>
+                            <div class="text-center col-12" style="margin-top:70px;">
+                                <button class="bottomleft">Load More</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-category" role="tabpanel" aria-labelledby="v-pills-category-tab">
+                </div>
+                <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab"
+                    style="padding: 0px 45px">
+                    <div class="row " style="padding: 45px 10px;">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row align-items-center"
+                                        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px; background: white;padding:40px;">
+                                        <div class="col-12 col-md-2 te mb-2 mb-md-0 xt-center morders">Orders</div>
+                                        <div class="col-12 col-md-10 ">
+                                            <div class="row">
+                                                <div class="col2 col-12 col-md-3 mb-2 mb-md-0 nav-item dropdown">
+                                                    <a class="okh text-truncate  mcategory samecolor nav-link dropdown-toggle"
+                                                        data-toggle="dropdown" href="#" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">Status</a>
+
+                                                    <div class="dropdown-menu categorylist">
+                                                        <a class="dropdown-item item" href="#">Delivery</a>
+                                                        <a class="dropdown-item item" href="#">Pending</a>
+                                                        <a class="dropdown-item item" href="#">Processing</a>
+                                                        <a class="dropdown-item item" href="#">Failed</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col2 col2 col-12 col-md-3 mb-2 mb-md-0 nav-item dropdown">
+                                                    <a class="okh text-truncate  mcategory samecolor nav-link dropdown-toggle"
+                                                        data-toggle="dropdown" href="#" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">Order Limits</a>
+
+                                                    <div class="dropdown-menu categorylist" style="">
+                                                        <a class="dropdown-item item" href="#">Last 7 orders</a>
+                                                        <a class="dropdown-item item" href="#">Last 15 orders</a>
+                                                        <a class="dropdown-item item" href="#">Last 30 orders</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col3 col-12 col-md-6">
+                                                    <input class="coll3 text-truncate w-100"
+                                                        style="width: 85%; border-style: none;background: rgb(235, 232, 232);padding: 8px 0px 8px 10px;"
+                                                        type="text" placeholder="Ex: Search by adress">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5" style="overflow-x: scroll; overflow-y:scroll;height: 365px;">
+                            <table class="col-12 bg-white">
+                                <tr class="col-12 bashhisse">
+                                    <th class="col-1 border" style="padding: 10px 35px 10px 20px;"> <input
+                                            type="checkbox"></th>
+                                    <th class="col-1 border"
+                                        style="padding:10px 35px 10px 20px;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        ID</th>
+                                    <th class=" border"
+                                        style="padding: 10px 35px 10px 20px;white-space: nowrap;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        Customer ID</th>
+                                    <th class="col-2 border"
+                                        style="padding: 10px 111px 10px 20px;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        Time</th>
+                                    <th class="col-2 border"
+                                        style="padding: 10px 70px 10px 20px;white-space: nowrap;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        Delivery Adress</th>
+                                    <th class="col-2 border"
+                                        style="padding: 10px 70px 10px 20px;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        Amount</th>
+                                    <th class="col-2 border"
+                                        style="padding: 10px 37px 10px 20px;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        Payment Amount</th>
+                                    <th class="col-2 border"
+                                        style="padding: 10px 70px 10px 20px;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        Contact</th>
+                                    <th class="col-2 border"
+                                        style="padding: 10px 70px 10px 20px;color: rgb(22, 31, 106) !important;font-size:16px;">
+                                        Status</th>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">1</td>
+                                    <td class="customerID">1</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">29 Eve Street, 543 Evenue Road, Ny 87876</td>
+                                    <td class="amount">$249.7</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">2</td>
+                                    <td class="customerID">2</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">29 Eve Street, 543 Evenue Road, Ny 87876</td>
+                                    <td class="amount">$339</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Panding</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">3</td>
+                                    <td class="customerID">3</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">29 Eve Street, 543 Evenue Road, Ny 87876</td>
+                                    <td class="amount">$339</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Failed</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">4</td>
+                                    <td class="customerID">1</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">33 Baker Street, Crescent Road, CA 65746</td>
+                                    <td class="amount">$450</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">5</td>
+                                    <td class="customerID">2</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">29 Eve Street, 543 Evenue Road, Ny 87876</td>
+                                    <td class="amount">$250</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">6</td>
+                                    <td class="customerID">2</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">29 Eve Street, 543 Evenue Road, Ny 87876</td>
+                                    <td class="amount">$250</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">7</td>
+                                    <td class="customerID">4</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">24092 Ocello Street San Diego, CA 92111</td>
+                                    <td class="amount">$600</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">8</td>
+                                    <td class="customerID">4</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">24092 Ocello Street San Diego, CA 92111</td>
+                                    <td class="amount">$600</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">9</td>
+                                    <td class="customerID">6</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">2971 Waldeck Street Arlington, TX 75760</td>
+                                    <td class="amount">$250</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">10</td>
+                                    <td class="customerID">6</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">2971 Waldeck Street Arlington, TX 75760</td>
+                                    <td class="amount">$350</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">11</td>
+                                    <td class="customerID">5</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">2396 Gordon Street Los Angeles, CA 90017</td>
+                                    <td class="amount">$350</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">12</td>
+                                    <td class="customerID">7</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">3090 Marshall Street Baltimore, MD 21202</td>
+                                    <td class="amount">$850</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">13</td>
+                                    <td class="customerID">2</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">43 Street, 2341 Road Visalia, Ny 24252</td>
+                                    <td class="amount">$400</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td class="ID">14</td>
+                                    <td class=" customerID">3</td>
+                                    <td class="time">14th Apr 2020</td>
+                                    <td class="deliveryadress">2852 Duck Creek Road Palo Alto, CA 94306</td>
+                                    <td class="amount">$350</td>
+                                    <td class="paymentamount">Cash On Delivery</td>
+                                    <td class="contact">715-371-3507</td>
+                                    <td class="status">Delivered</td>
+                                </tr>
+                        </div>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-customers" role="tabpanel" aria-labelledby="v-pills-customers-tab">
+            </div>
+            <div class="tab-pane fade" id="v-pills-coupons" role="tabpanel" aria-labelledby="v-pills-coupons-tab">
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            </div>
+            <div class="tab-pane fade" id="v-pills-logout" role="tabpanel" aria-labelledby="v-pills-logout-tab">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="notificationtable">
+        <div class="d-flex justify-content-between"
+            style="border-bottom: 1px solid rgb(230, 230, 230);padding: 15px 25px">
+            <div class="notification">
+                Notification
+            </div>
+            <div class="clear">
+                Clear all
+            </div>
+        </div>
+        <div class="d-flex" style="padding: 15px 25px 9px 25px;">
+            <span class="delivery">Delivery Successful</span>
+            <span class="circle"></span>
+            <spa style="margin-top: 2px;" class="time">5m</span>
+        </div>
+        <div class="time time2" style="padding: 0px 25px 15px 25px;">
+            Order #34567 had been placed
+        </div>
+        <div class="text-center mt-2 morefeeds">
+            <a href="">More Feeds</a>
+        </div>
+    </div>
+
+    <div class="settings">
+        <div>
+            <div class="settingsmenu">Staff</div>
+            <div class="settingsmenu">Settings</div>
+            <div class="settingsmenu logout">Log Out</div>
+        </div>
+    </div>
+    <div class="full" style="width: 100%; height:100%;background-color: rgba(0, 0, 0, 0.5);;position:fixed;top:0;">
+        <div class="clickadd">
+            <div class="exit">
+                <svg class="cursor:pointer" xmlns="http://www.w3.org/2000/svg" width="6px" height="6px"
+                    viewBox="0 0 10.003 10">
+                    <path id="_ionicons_svg_ios-close_5_" data-name="_ionicons_svg_ios-close (5)"
+                        d="M166.686,165.55l3.573-3.573a.837.837,0,0,0-1.184-1.184l-3.573,3.573-3.573-3.573a.837.837,0,1,0-1.184,1.184l3.573,3.573-3.573,3.573a.837.837,0,0,0,1.184,1.184l3.573-3.573,3.573,3.573a.837.837,0,0,0,1.184-1.184Z"
+                        transform="translate(-160.5 -160.55)" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div class="headerclick">
+                Add Product
+            </div>
+            <form class="form-add-product" id="form-add-product" action="">
+                <input type="hidden" val="">
+                <div class="mb-4" style="overflow-y: scroll;height: 450px;overflow-x: hidden;">
+                    <div class="row">
+                        <div class="addproductsleft col-lg-4 col-md-12  mt-5"
+                            style="width: 100%; color: rgb(102, 109, 146);font-size:15px">
+                            Upload your Product image here
+                        </div>
+                        <div class="col-lg-8 col-md-12 mt-4" style="width: 100%; text-align: center;background: white">
+                            <div style="padding: 30px;">
+                                <div class="dashedborder">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" width="41px" height="30px"
+                                            viewBox="0 0 40.909 30">
+                                            <g id="cloud-storage-uploading-option" transform="translate(0 -73.091)">
+                                                <path id="Path_2125" data-name="Path 2125"
+                                                    d="M39.129,89.827A8.064,8.064,0,0,0,34.58,86.94,5.446,5.446,0,0,0,30,78.546a5.207,5.207,0,0,0-3.537,1.321,10.921,10.921,0,0,0-10.1-6.776,10.511,10.511,0,0,0-7.713,3.2A10.508,10.508,0,0,0,5.454,84q0,.277.043.916A9.528,9.528,0,0,0,0,93.546a9.193,9.193,0,0,0,2.8,6.743,9.191,9.191,0,0,0,6.744,2.8H32.728a8.172,8.172,0,0,0,6.4-13.264Zm-12.06-.575a.656.656,0,0,1-.479.2H21.818v7.5a.691.691,0,0,1-.681.681H17.045a.691.691,0,0,1-.682-.681v-7.5H11.59a.655.655,0,0,1-.681-.681.8.8,0,0,1,.213-.512L18.6,80.783a.722.722,0,0,1,.98,0l7.5,7.5a.663.663,0,0,1,.191.49A.656.656,0,0,1,27.07,89.252Z"
+                                                    transform="translate(0)" fill="#e6e6e6"></path>
+                                            </g>
+                                        </svg></div>
+                                    <span class="drag">Drag/Upload</span>
+                                    <input type="file" class="d-none upload" name="main_image" id="">
+                                    <span class="upload">your image here</span>
+                                    <small style="color:red"></small>
+                                </div>
+                                <div id="card-img">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mt-5"
+                            style="width: 100%; color: rgb(102, 109, 146);font-size:15px">
+                            Add your Product description and necessary information from here
+                        </div>
+                        <div class="col-8  mt-4" style="background: white">
+                            <div>
+                                <label class="labelname" for="Name">Name</label>
+                                <br>
+                                <input class="inputstyle" type="text" name="title" id="name-input">
+                                <small style="color:red"></small>
+                            </div>
+                            <div>
+                                <label class="labelname" for="">Description</label>
+                                <br>
+                                <textarea class="inputstyle" name="description" type="textarea" id="textarea-input" cols=""
+                                    rows="3"></textarea>
+                                <small style="color:red"></small>
+                            </div>
+                            <div>
+                                <label class="labelname" for="unit">Unit</label>
+                                <br>
+                                <input class="inputstyle" type="text" name="unit" id="unit-input">
+                                <small style="color:red"></small>
+                            </div>
+                            <div>
+                                <label class="labelname" for="saleprice">Amount By Unit</label>
+                                <br>
+                                <input class="inputstyle" type="number" name="amount_by_unit" id="amount-by-unit">
+                                <small style="color:red"></small>
+                            </div>
+                            <div>
+                                <label class="labelname" for="Price">Price</label>
+                                <br>
+                                <input class="inputstyle" type="number" name="price" id="price-input">
+                                <small style="color:red"></small>
+                            </div>
+
+                            <div>
+                                <label class="labelname" for="">Discount In Percent</label>
+                                <br>
+                                <input class="inputstyle" type="number" name="discount_price" id="discount-price">
+                                <small style="color:red"></small>
+                            </div>
+                            <!-- <div>
+                                <label class="labelname" for="Product">Product Quantity</label>
+                                <br>
+                                <input class="inputstyle" type="number" name="amount_by_unit" id="">
+                                <small style="color:red"></small>
+                            </div> -->
+                            <!-- <div>
+                                <label class="labelname" for="country">Type</label>
+                                <select class="inputstyle" id="country" name="country">
+                                    <option value="australia">Product Type</option>
+                                </select>
+                                <small style="color:red"></small>
+
+                            </div> -->
+                            <div>
+                                <label for="" class="labelname">Category</label>
+                                <select class="inputstyle listcategory" name="category" id="category-input">
+                                    <option value="">Category</option>
+                                </select>
+                                <small style="color:red"></small>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+        <div class="row  ashagi" style="background: white;">
+            <div class="col-6 backcancel">
+                <button class="addcancel" style="width: 90%">Cancel</button>
+            </div>
+            <div class="col-6 backcreate">
+                <input class="addcreate" style="width: 90%;cursor:pointer" type="submit" value="Create Product">
+            </div>
+
+        </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
+        </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="product2.js"></script>
+</body>
+
+</html>

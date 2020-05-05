@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.addproducts{
+    color: white;
+    font-size: 15px;
+     font-family: 'Lato', sans-serif;
+     font-weight: bold;
+}
+.ulduz svg{
+    position: absolute;
+    top: 34px;
+    right: 136px;
+    color: rgb(0, 212, 181);
+}
+.solteref{
+    width: 20%;
+}
+.sagteref{
+    width: 80%;
+    
+height: 600px;
+}
+.leftside{
+    color: rgb(22, 31, 106);
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    font-weight: 700 !important;
+    padding: 20px 0px 20px 75px;
+    border-radius: 20px;
+}
+.leftlink1{
+    margin-top: 30px;
+}
+
+.nav-pills .nav-link.active{
+    color: rgb(0, 212, 181) !important;
+    background: rgb(247, 247, 247) !important;
+    }
+.nav-pills a:hover{
+    color: rgb(22, 31, 106) !important;
+}
+.okh{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.buttonaddproducts:hover{
+    background-color: rgb(0, 189, 135) !important;
+}
+.middle{
+    margin: 31px 69px 0px 26px;
+    padding: 45px 21px 45px 43px;
+    color: rgb(22, 31, 106);
+}
+.mproduct,.morders{
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(22, 31, 106);
+}
+.samecolor{
+    color:rgb(22, 31, 106) !important;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid white;
+    background: rgb(235, 232, 232);
+    
+}
+.samecolor:focus{
+    border-color: rgb(0, 197, 141);
+}
+.mplace{
+    font-family: 'Lato', sans-serif;
+}
+.mplace:focus{
+    border-style: solid !important;
+    border-color: rgb(0, 197, 141);
+}
+.categorylist{
+    margin-top: 10px;
+    border-radius: 0px;
+
+}
+.item{
+    background: white;
+    color: rgb(102, 109, 146);
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    white-space: pre-wrap;
+}
+.item:hover{
+    color:rgb(102, 109, 146) !important;
+}
+.card{
+    width: 14rem !important;
+    border-style: none !important;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.toppict{
+    margin-left: 10px !important;
+    margin-right: 55px !important;
+    }
+.cardmoney{
+    margin-top: 15px;
+}
+.cardh6{
+    margin-top: 40px;
+    color: rgb(102, 109, 146);
+    font-family:sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.cardmoney{
+    color: rgb(0, 197, 141);
+    font-family: "Lato", sans-serif;
+}
+.cardname{
+    color: rgb(22, 31, 106);
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+.bottomleft{
+    padding: 12px 16px;
+    background-color: rgb(0, 197, 141);
+    font-family: "Lato", sans-serif;
+    color: white;
+    border-style: none;
+    font-weight: 700 !important;
+    font-size: 15px;
+}
+.bottomleft:hover{
+    background-color: rgb(0, 189, 135); 
+}
+.notificationtable{
+    position: absolute;
+    top: 59px;
+    right: 141px;
+    width: 330px;
+    height: 210px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 16px;
+    background: white;
+    box-sizing: border-box;
+    display: none;
+    z-index: 10;
+}
+.show{
+    display: block !important;
+}
+.notification{
+    font-size: 20px;
+    color: rgb(22, 31, 106);
+    font-family: "Lato", sans-serif;
+}
+.clear{
+    color: rgb(252, 92, 99);
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+}
+.circle{
+    width: 4px;
+    height: 4px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 2px;
+    margin: 11px 11px 0px 11px;
+}
+.delivery{
+    color: rgb(22, 31, 106);
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+.time{
+    color: rgb(102, 109, 146);
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 400;
+    
+}
+.time2{
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+.morefeeds a{
+    text-decoration: none;
+    color: rgb(0, 197, 141);
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+}
+.card{
+    width: 100% !important;
+}
+.settings{
+    width: 220px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 16px;
+    background: white;
+    position: absolute;
+    top: 73px;
+    right: 43px;
+    
+    display: none;
+}
+.settingsmenu{
+    border-bottom: 1px solid rgb(247, 247, 247);
+    padding: 16px 20px;
+    color: rgb(102, 109, 146);
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+}
+.settingsmenu:hover{
+    color: #00c58d;
+}
+.show2{
+    display: block !important;
+}
+
+.clickadd{
+    width: 70vw;
+    height: 100%;
+    background-color: rgb(247, 247, 247);
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 30px 70px;
+    transition: 2s all;
+}
+.headerclick{
+    color: rgb(22, 31, 106);
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+}
+.dashedborder{
+    border: 2px dashed rgb(230, 230, 230);
+    border-radius: 3px;
+    padding: 35px;
+}
+.drag{
+    color:rgb(0, 197, 141);
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+.upload{
+    font-weight: 400;
+    font-size: 16px;
+}
+.ashagi{
+    position: fixed;
+    bottom: 0;
+    right: 13px;
+    width: 70vw;
+}
+.backcancel{
+    padding: 30px;
+}
+.addcancel{
+    color: rgb(252, 92, 99);
+    background: white;
+    border-style: none;
+    padding: 12px 16px;
+    font-family: "Lato", sans-serif;
+}
+.addcancel:hover{
+    background-color: rgb(247, 247, 247);
+}
+.backcreate{
+padding: 30px
+}
+.addcreate{
+    text-align: center;
+    padding: 12px 16px;
+    background: #00be88;
+    border-style: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+}
+.addcreate:hover{
+    background-color: rgb(0, 189, 135);
+}
+.exit{
+     position: absolute;
+     top: 12px;
+     left: -30px;
+    color: rgb(102, 109, 146);
+    padding: 0px 9px;
+    background: white;
+    border-radius: 50%;
+    transition:all 2s;
+}
+.full{
+    display: none;
+}
+
+.show3{
+   display: block; 
+   transition:all 2s;
+}
+.labelname{
+    color: rgb(22, 31, 106);
+    font-size: 16px;
+    font-family:  "Lato", sans-serif;
+    margin-top: 15px;
+}
+.inputstyle{
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 0;
+    border-style: none;
+    background-color: rgb(236, 234, 234);
+}
+.inputstyle:focus{
+border-color: #00c58d !important;
+border-style: solid;
+}
+
+/* .col2{
+    width: 26%;
+}
+.col3{
+    width: 48%;
+} */
+.coll3:focus{
+    border-color: #00c58d !important;
+    border-style: solid !important;
+}
+.bashhisse{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid white;
+}
+.bashhisse th{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.checkbox{
+    padding: 10px 35px 10px 20px;
+    
+}
+.ID{
+    padding: 10px 35px 10px 20px;
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.customerID{
+    padding: 10px 35px 10px 20px;
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.time{
+    padding: 10px 35px 10px 20px;
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.deliveryadress{
+    padding: 10px 35px 10px 20px;
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.amount{
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.paymentamount{
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.contact{
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.status{
+    color: rgb(22, 31, 106) !important;
+    font-size: 16px;
+}
+.header2{
+    display: none;
+}
+.menuheader2{
+    width: 270px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.menuheader2 a{
+    white-space: nowrap;
+    z-index: 5;
+    
+    
+}
+.full2{
+    z-index: 4;
+    display: none;
+}
+
+
+@media screen and (max-width:1185px){
+    .header2{
+        display: block;
+    }
+.solteref{
+    display: none;
+}
+.sagteref{
+    width: 100%;
+}
+.sagterefscroll{
+    height: 450px !important;
+}
+header{
+    display: none;
+}
+}
+
+@media screen and (max-width:575px){
+.shekil{
+    width: 200px;
+    margin:auto;
+}
+.sagterefscroll{
+    height: 400px !important;
+    background-size: co
+}
+}
+#name-input{
+    font-family: "Lato", sans-serif;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(22, 31, 106);
+}
+#unit-input{
+    font-family: "Lato", sans-serif;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(22, 31, 106);
+}
+#price-input{
+    font-family: "Lato", sans-serif;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(22, 31, 106);
+}
