@@ -512,3 +512,23 @@ font-family: "Lato", sans-serif;
     .importantRule{
         display: block !important;
     }
+    .kart2 .increase,.kart2 .decrease,.kart2 .products-count{
+        color: white !important;
+        cursor: pointer;
+    }
+    .kart2{
+        background-color: rgb(0, 158, 127) !important;
+        font-size: 15px;
+        justify-content: space-between;
+        width: 90px;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .modalcart{
+        display: flex !important;
+        justify-content: space-evenly !important;
+        width: 104px !important;
+    }
+    .child_modalcart{
+        display: flex;
+    }
