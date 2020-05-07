@@ -71,7 +71,7 @@ function itemRemove(id) {
   let product_item = parseInt(document.querySelector('.backet-item').textContent);
   product_allsum = parseFloat(product_allsum - product_sum).toFixed(2);
   product_count = parseInt(product_count);
-  console.log(product_allsum);
+  // console.log(product_allsum);
   product_item--;
   exit_button[0].remove();
   //kart evvelki veziyyetine qayidir
@@ -113,7 +113,7 @@ function itemRemove(id) {
 //
 function addItem(id) {
   let parent = document.querySelectorAll(`[product_id="${id}"]`);
-  console.log(parent)
+  // console.log(parent)
   let card_price = parent[1].querySelector('.card-money').innerText;
   card_price = parseInt(card_price.replace('$', ''));
   let product_count = parseInt(parent[1].querySelector('.products-count').innerText);
@@ -121,7 +121,7 @@ function addItem(id) {
   product_count++;
   sum = product_count * card_price;
   product_allsum = parseFloat(product_allsum + card_price).toFixed(2);
-  console.log(product_allsum, card_price)
+  // console.log(product_allsum, card_price)
 
   document.querySelectorAll('.all-sum').forEach((element) => {
     element.innerHTML = product_allsum;
@@ -152,7 +152,7 @@ function removeItem(id) {
   //kart evvelki veziyyetine qayidir
   if (product_count == 0) {
     itemRemove(id);
-    console.log(parent)
+    // console.log(parent)
     let parent_kart_mins = parent[1].querySelector('.kart');
     let althisse_kart_mins = parent_kart_mins.closest('.althisse');
     parent_kart_mins.remove();
@@ -168,12 +168,15 @@ function removeItem(id) {
     let card_button = $(`<p class="kart rounded-pill border bg-white  p-2 pr-4 pl-4">${svg_kart_mins}Cart</p>`);
     $(althisse_kart_mins).append(card_button);
     let card_button_modal = $(`<span class="card_modal">${svg_kart_mins}Cart<span>`);
-    let child_modalcart = parent[2].querySelector('.child_modalcart');
-    let product_id = parent[2].getAttribute('product_id');
-    console.log(child_modalcart)
-    let xxx = child_modalcart.closest('.modalcart');
-    child_modalcart.remove();
-    $(xxx).append(card_button_modal);
+    if (parent[2]) {
+      let child_modalcart = parent[2].querySelector('.child_modalcart');
+      let product_id = parent[2].getAttribute('product_id');
+      console.log(child_modalcart)
+      let xxx = child_modalcart.closest('.modalcart');
+      child_modalcart.remove();
+      document.querySelector('.modalcart').innerHTML = "";
+      $(xxx).append(card_button_modal);
+    }
     //........
     let modalcart = document.querySelector('.modalcart');
     let child_modalcart2 = document.createElement('div');
@@ -423,6 +426,8 @@ if (localStorage.getItem('lcl_all')) {
 
 //
 function inModal(x, id, card_body_parent, target_element) {
+  // console.log(target_element);
+
   var card_title = card_body_parent.getElementsByClassName("card-title")[0].innerHTML;
   var card_pc = card_body_parent.getElementsByClassName("card-text")[0].innerHTML;
   var card_price = card_body_parent.getElementsByClassName("card-money")[0].innerHTML;
@@ -647,11 +652,11 @@ function inModal(x, id, card_body_parent, target_element) {
   //   }
   // }
 }
+
+
+
 //
 function addToCard(x, id) {
-  console.log(event);
-  console.log(event.target);
-
   var card_body_parent = event.target.closest('.card');
   var target_element = event.target;
 
@@ -669,34 +674,54 @@ function addToCard(x, id) {
     document.querySelector('.product-image').setAttribute('src', card_img_top);
     document.querySelectorAll('.subproduct-image').forEach((element) => {
       element.setAttribute('src', card_img_top);
-      let card_img_title = x.querySelector('.card-title').innerText;
-      document.querySelector('.modal-title').innerText = card_img_title;
-      let card_img_text = x.querySelector('.card-text').innerText;
-      document.querySelector('.modal-pc').innerText = card_img_text;
-      let card_img_money = x.querySelector('.card-money').innerText;
-      document.querySelector('.pul').innerText = card_img_money;
+    })
+
+    let card_img_title = x.querySelector('.card-title').innerText;
+    document.querySelector('.modal-title').innerText = card_img_title;
+    let card_img_text = x.querySelector('.card-text').innerText;
+    document.querySelector('.modal-pc').innerText = card_img_text;
+    let card_img_money = x.querySelector('.card-money').innerText;
+    document.querySelector('.pul').innerText = card_img_money;
 
 
-      let modalcart = document.querySelector('.modalcart');
-      let child_modalcart = document.createElement('div');
-      child_modalcart.classList.add('child_modalcart')
-      let card_group_inc_dec = document.createElement('div');
-      card_group_inc_dec.classList.add('js-inc-dec')
-      let card_group_increase = document.createElement('div');
-      card_group_increase.classList.add('increase');
-      card_group_increase.style.color = "#77798c";
-      card_group_increase.style.cursor = "pointer";
-      let svg_plus = `<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 12 12"><g id="Group_3351" data-name="Group 3351" transform="translate(-1367 -190)"><rect data-name="Rectangle 520" width="12" height="2" rx="1" transform="translate(1367 195)" fill="currentColor"></rect><rect data-name="Rectangle 521" width="12" height="2" rx="1" transform="translate(1374 190) rotate(90)" fill="currentColor"></rect></g></svg>`
-      card_group_increase.innerHTML = svg_plus;
-      let card_group_count = document.createElement('div');
-      card_group_count.classList.add('products-count', 'style-count');
-      if (x.querySelector('.products-count') != null) {
-        card_group_count.innerText = x.querySelector('.products-count').innerHTML;
-      }
-      else {
+    let modalcart = document.querySelector('.modalcart');
+    let child_modalcart = document.createElement('div');
+    child_modalcart.classList.add('child_modalcart')
 
-        modalcart.innerHTML = ' ';
-        let inside_card = `<span class="card_modal"><svg
+    let card_group_inc_dec = document.createElement('div');
+    card_group_inc_dec.classList.add('js-inc-dec')
+
+    let card_group_increase = document.createElement('div');
+    card_group_increase.classList.add('increase');
+    card_group_increase.style.color = "#77798c";
+    card_group_increase.style.cursor = "pointer";
+    let svg_plus = `<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 12 12"><g id="Group_3351" data-name="Group 3351" transform="translate(-1367 -190)"><rect data-name="Rectangle 520" width="12" height="2" rx="1" transform="translate(1367 195)" fill="currentColor"></rect><rect data-name="Rectangle 521" width="12" height="2" rx="1" transform="translate(1374 190) rotate(90)" fill="currentColor"></rect></g></svg>`
+    card_group_increase.innerHTML = svg_plus;
+
+    let card_group_count = document.createElement('div');
+    card_group_count.classList.add('products-count', 'style-count');
+
+    let card_group_decrease = document.createElement('div');
+    card_group_decrease.classList.add('decrease');
+    card_group_decrease.style.color = "#77798c";
+    card_group_decrease.style.cursor = "pointer";
+    let svg_minus = `<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="2px" viewBox="0 0 12 2"><rect data-name="Rectangle 522" width="12" height="2" rx="1" fill="currentColor"></rect></svg>`;
+    card_group_decrease.innerHTML = svg_minus;
+
+
+    if (x.querySelector('.products-count') != null) {
+      card_group_count.innerText = x.querySelector('.products-count').innerHTML;
+      modalcart.innerHTML = ' ';
+      child_modalcart.appendChild(card_group_decrease);
+      child_modalcart.appendChild(card_group_count);
+      child_modalcart.appendChild(card_group_increase);
+      modalcart.appendChild(child_modalcart);
+    }
+    else {
+      console.log('else');
+
+      modalcart.innerHTML = ' ';
+      let inside_card = `<span class="card_modal"><svg
         xmlns="http://www.w3.org/2000/svg" width="14.4" height="12"
         viewBox="0 0 14.4 12">
         <g data-name="Group 120" transform="translate(-288 -413.89)">
@@ -705,54 +730,34 @@ function addToCard(x, id) {
             </path>
         </g>
     </svg>Cart<span>`;
-        modalcart.innerHTML = inside_card;
-        $('.card_modal').click(function () {
-          let target_element = document.querySelector('.kart');
-          inModal(x, id, card_body_parent, target_element);
-          modalcart.innerHTML = ' ';
-          child_modalcart.appendChild(card_group_decrease);
-          card_group_count.innerHTML = 1;
-          child_modalcart.appendChild(card_group_count);
-          child_modalcart.appendChild(card_group_increase);
-          modalcart.appendChild(child_modalcart);
-        })
-      }
+      modalcart.innerHTML = inside_card;
+      $('.card_modal').click(function () {
+        let parents = document.querySelectorAll(`[product_id="${product_id}"]`);
+        console.log(parents);
 
-      let card_group_decrease = document.createElement('div');
-      card_group_decrease.classList.add('decrease');
-      card_group_decrease.style.color = "#77798c";
-      card_group_decrease.style.cursor = "pointer";
-      let svg_minus = `<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="2px" viewBox="0 0 12 2"><rect data-name="Rectangle 522" width="12" height="2" rx="1" fill="currentColor"></rect></svg>`;
-      card_group_decrease.innerHTML = svg_minus;
-      if (card_group_count.innerText != 0) {
-        console.log('aa');
+        let target_element = parents[0].querySelector('.kart');
+        inModal(x, id, card_body_parent, target_element);
         modalcart.innerHTML = ' ';
-        modalcart.appendChild(card_group_decrease);
-        modalcart.appendChild(card_group_count);
-        modalcart.appendChild(card_group_increase);
-      }
-      card_group_increase.addEventListener('click', function () {
-        console.log('ac')
-        addItem(product_id);
+        child_modalcart.appendChild(card_group_decrease);
+        card_group_count.innerHTML = 1;
+        child_modalcart.appendChild(card_group_count);
+        child_modalcart.appendChild(card_group_increase);
+        modalcart.appendChild(child_modalcart);
       })
+    }
 
 
-      //   if (document.querySelector('.products-count') != null && document.querySelector('.products-count').textContent == 1) {
-      //   document.querySelector('.products-count').textContent = 0;
-      //   console.log(document.querySelector('.products-count').textContent)
-      //   card_group_decrease.addEventListener('click', function () {
-      //     removeItem(product_id);
-      //     card_group_count.innerHTML = 0;
-
-      //   })
-      // }
-      // else {
-      card_group_decrease.addEventListener('click', function () {
-        removeItem(product_id);
-      })
-      // }
-
+    card_group_increase.addEventListener('click', function () {
+      console.log('ac')
+      addItem(product_id);
     })
+
+
+    card_group_decrease.addEventListener('click', function () {
+      removeItem(product_id);
+    })
+    // }
+
   }
   // localestorage
   //   const sum_all = localStorage.getItem('allsum');
