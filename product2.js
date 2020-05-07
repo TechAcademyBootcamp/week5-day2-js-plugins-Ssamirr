@@ -26,6 +26,24 @@ $(document).ready(function () {
     })
     document.querySelector('#form-add-product').addEventListener('submit', function (event) {
         event.preventDefault();
+        let submitButton = $('.addcreate').val();
+        let requestMethod;
+        let requestUrl;
+        console.log(submitButton)
+        if (submitButton === 'Uptade Product') {
+            let id=this.getAttribute('product_id');
+            console.log(id);
+            console.log('put');
+            requestMethod = 'PUT';
+            requestUrl = `${domain}/api/products/${id}/`;
+        }
+        else {
+            // let id=this.getAttribute('product_id');
+            // console.log(id);
+            // console.log('post');
+            requestMethod = "POST";
+            requestUrl = `${domain}/api/products/`;
+        }
         let formData = new FormData(this);
         // document.querySelectorAll('.form-add-product input,.form-add-product textarea,.form-add-product select').forEach((input) => {
         //     formData[input.getAttribute('name')] = input.value;
@@ -34,8 +52,8 @@ $(document).ready(function () {
             small_tag.innerHTML = '';
         })
         $.ajax({
-            url: `${domain}/api/products/`,
-            method: 'POST',
+            url: requestUrl,
+            method: requestMethod,
             data: formData,
             cache: false,
             contentType: false,
@@ -81,7 +99,7 @@ $(document).ready(function () {
                     $('.picturess').append(` 
 
                     <div class="col-lg-3 col-xl-3 col-md-4 col-12 col-sm-6 pictures">
-                    <div class=" card" data-toggle="modal" data-target="#exampleModal1"
+                    <div class=" card" product_id="${product.id}" data-toggle="modal" data-target="#exampleModal1"
                         style="width: 13rem;">
                         <img class=" shekil" style="height: 220px;"
                             src="${product.main_image}"
@@ -101,11 +119,16 @@ $(document).ready(function () {
                     var card = document.getElementsByClassName("card");
                     for (var i = 0; i < card.length; i++) {
                         card[i].addEventListener('click', function () {
-                            document.querySelector('.full').style.display='block';
+                            document.querySelector('.full').style.display = 'block';
+                            document.querySelector('#card-img').style.display = 'block';
+                            // document.querySelector('.addcreate').setAttribute('Create Product','dd');
+                            let product_id = this.getAttribute('product_id')
+                            $('.addcreate').val('Uptade Product');
+                            $('#form-add-product').attr('product_id', product_id);
                             document.querySelector('.exit').addEventListener('click', function () {
-                                document.querySelector('.full').style.display='none';
+                                document.querySelector('.full').style.display = 'none';
                             })
-                            
+
 
                             var card_body_parent = this.closest('.card');
                             var card_img = card_body_parent.getElementsByClassName("shekil")[0];
@@ -169,18 +192,24 @@ $(document).ready(function () {
         }
     })
     document.querySelector('.buttonaddproducts').addEventListener('click', function () {
-        document.querySelector('.full').style.display='block';
+        document.querySelector('.full').style.display = 'block';
     })
     document.querySelector('.exit').addEventListener('click', function () {
-        document.querySelector('.full').style.display='none';
+        document.querySelector('.full').style.display = 'none';
+        document.getElementById("form-add-product").reset();
+        document.querySelector('#card-img').style.display = 'none';
+        $('.addcreate').val('Create Product');
+        // $('.addcreate').removeClass('Uptade');
+
+
     })
-    
+
 
     // document.querySelector('.buttonaddproducts').addEventListener('click', function () {
     //     document.querySelector('.full').classList.toggle('show3');
     // })
 
-    
+
 
     document.querySelector('body').addEventListener('click', function (event) {
 
