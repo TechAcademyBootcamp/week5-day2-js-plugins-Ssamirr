@@ -1,3 +1,4 @@
+const domain = 'http://35.225.243.133';
 var svg = `<svg class="mr-4"
 xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 18 18">
 <g data-name="Layer 2">
@@ -60,6 +61,137 @@ xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 18 18
     </g>
 </g>
 </svg>`;
+function localStorageBacket(id, card_title, count, sum, card_img_src, card_pc, card_price) {
+
+  let card_products = document.querySelector('#card_products');
+  let card_group_div1 = document.createElement('div');
+  card_group_div1.classList.add('card');
+  card_group_div1.style.maxWidth = "540px";
+  card_group_div1.setAttribute("product_id", id);
+
+  // card_group_div1.setAttribute("product_titl", id);
+
+
+  let card_group_div2 = document.createElement('div');
+  card_group_div2.classList.add('row', 'no-gutters');
+
+
+
+  let card_group_col4 = document.createElement('div');
+  card_group_col4.classList.add('col-md-4', 'jsleft');
+
+  let card_group_inc_dec = document.createElement('div');
+  card_group_inc_dec.classList.add('js-inc-dec')
+  let card_group_increase = document.createElement('div');
+  card_group_increase.classList.add('increase');
+  card_group_increase.style.color = "#77798c";
+  card_group_increase.style.cursor = "pointer";
+  let svg_plus = `<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 12 12"><g id="Group_3351" data-name="Group 3351" transform="translate(-1367 -190)"><rect data-name="Rectangle 520" width="12" height="2" rx="1" transform="translate(1367 195)" fill="currentColor"></rect><rect data-name="Rectangle 521" width="12" height="2" rx="1" transform="translate(1374 190) rotate(90)" fill="currentColor"></rect></g></svg>`
+  card_group_increase.innerHTML = svg_plus;
+  let card_group_count = document.createElement('div');
+  card_group_count.classList.add('products-count', 'style-count');
+  card_group_count.innerText = count;
+  let card_group_decrease = document.createElement('div');
+  card_group_decrease.classList.add('decrease');
+  card_group_decrease.style.color = "#77798c";
+  card_group_decrease.style.cursor = "pointer";
+  let svg_minus = `<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="2px" viewBox="0 0 12 2"><rect data-name="Rectangle 522" width="12" height="2" rx="1" fill="currentColor"></rect></svg>`;
+  card_group_decrease.innerHTML = svg_minus;
+  card_group_inc_dec.appendChild(card_group_increase);
+  card_group_inc_dec.appendChild(card_group_count);
+  card_group_inc_dec.appendChild(card_group_decrease);
+
+
+
+  let card_group_div3 = document.createElement('div');
+  let card_group_img = document.createElement('img');
+  card_group_img.classList.add('card-img', 'js-img-style');
+  card_group_img.setAttribute('src', card_img_src);
+  card_group_div3.appendChild(card_group_img);
+
+  card_group_col4.appendChild(card_group_inc_dec);
+  card_group_col4.appendChild(card_group_div3);
+
+  let card_group_col8 = document.createElement('div');
+  card_group_col8.classList.add('col-md-8');
+
+  let card_group_card_body = document.createElement('div');
+  card_group_card_body.classList.add('card-body', 'js-card-body');
+
+  let card_group_card_title = document.createElement('h5');
+  card_group_card_title.classList.add('card-title', 'js-tittle');
+  card_group_card_title.innerText = card_title;
+
+  let card_group_div4 = document.createElement('div');
+  card_group_div4.classList.add('js-price-line');
+  let card_group_price = document.createElement('p');
+  card_group_price.classList.add('card-text', 'js-text');
+  card_group_price.innerText = `$ ${card_price}`;
+  card_group_div4.appendChild(card_group_price);
+
+
+  let card_group_div5 = document.createElement('div');
+  card_group_div5.classList.add('js-div5');
+  let card_group_sign_money = document.createElement('p');
+  card_group_sign_money.classList.add('dollar');
+  card_group_sign_money.innerText = '$';
+  let card_group_sum = document.createElement('p');
+  card_group_sum.classList.add('products-money');
+  card_group_sum.innerText = sum;
+  let card_group_exit = document.createElement('span');
+  card_group_exit.style.marginLeft = "20px";
+  card_group_exit.innerHTML = `<svg class="elmnt3 backet2 js-exit" xmlns="http://www.w3.org/2000/svg" width="10.003" height="10" viewBox="0 0 10.003 10">
+<path data-name="_ionicons_svg_ios-close (5)" d="M166.686,165.55l3.573-3.573a.837.837,0,0,0-1.184-1.184l-3.573,3.573-3.573-3.573a.837.837,0,1,0-1.184,1.184l3.573,3.573-3.573,3.573a.837.837,0,0,0,1.184,1.184l3.573-3.573,3.573,3.573a.837.837,0,0,0,1.184-1.184Z" transform="translate(-160.5 -160.55)" fill="currentColor"></path>
+</svg>`
+
+
+  card_group_div5.appendChild(card_group_sign_money);
+  card_group_div5.appendChild(card_group_sum);
+  card_group_div5.appendChild(card_group_exit);
+  card_group_div4.appendChild(card_group_div5);
+
+  let card_group_div6 = document.createElement('div');
+  card_group_div6.classList.add('d-flex', 'js-money');
+  let card_group_count2 = document.createElement('span');
+  card_group_count2.classList.add('products-count', 'mr-1');
+  card_group_count2.innerText = count;
+  let card_group_card_money = document.createElement('span');
+  card_group_card_money.classList.add('card-money');
+  card_group_card_money.innerText = `X ${card_pc}`;
+  card_group_div6.appendChild(card_group_count2);
+  card_group_div6.appendChild(card_group_card_money);
+
+  card_group_card_body.appendChild(card_group_card_title);
+  card_group_card_body.appendChild(card_group_div4);
+  card_group_card_body.appendChild(card_group_div6);
+
+  card_group_col8.appendChild(card_group_card_body);
+
+  card_group_div2.appendChild(card_group_col4);
+  card_group_div2.appendChild(card_group_col8);
+
+  card_group_div1.appendChild(card_group_div2);
+
+  card_products.appendChild(card_group_div1);
+  card_group_increase.addEventListener('click', function () {
+    addItem(id);
+  })
+
+  card_group_decrease.addEventListener('click', function () {
+    removeItem(id);
+    let exit_button = this.closest('.card');
+    let product_count = parseInt(exit_button.querySelector('.products-count').textContent);
+    if (product_count == 0) {
+      itemRemove(id);
+    }
+  })
+
+  card_group_exit.addEventListener('click', function () {
+    itemRemove(id);
+  })
+
+
+}
 // silir
 function itemRemove(id) {
   let exit_button = document.querySelectorAll(`[product_id="${id}"]`)
@@ -87,7 +219,7 @@ function itemRemove(id) {
         </path>
     </g>
 </svg>`);
-  let card_button = $(`<p class="kart rounded-pill border bg-white  p-2 pr-4 pl-4">${svg_kart_mins}Cart</p>`);
+  let card_button = $(`<p class="col-6 kart rounded-pill border bg-white  p-2">${svg_kart_mins}Cart</p>`);
   $(althisse_kart_mins).append(card_button);
   // if (exit_button[2]) {
   //   exit_button[2].querySelector('.modalcart').innerHTML='';
@@ -116,7 +248,7 @@ function addItem(id) {
   // console.log(parent)
   let card_price = parent[1].querySelector('.card-money').innerText;
   card_price = parseInt(card_price.replace('$', ''));
-  let product_count = parseInt(parent[1].querySelector('.products-count').innerText);
+  let product_count = parseInt(parent[0].querySelector('.products-count').innerText);
   let product_allsum = parseFloat(document.querySelector('.all-sum').textContent);
   product_count++;
   sum = product_count * card_price;
@@ -165,23 +297,23 @@ function removeItem(id) {
         </path>
     </g>
 </svg>`);
-    let card_button = $(`<p class="kart rounded-pill border bg-white  p-2 pr-4 pl-4">${svg_kart_mins}Cart</p>`);
+    let card_button = $(`<p class="col-6 kart rounded-pill border bg-white  p-2 ">${svg_kart_mins}Cart</p>`);
     $(althisse_kart_mins).append(card_button);
     let card_button_modal = $(`<span class="card_modal">${svg_kart_mins}Cart<span>`);
     if (parent[2]) {
       let child_modalcart = parent[2].querySelector('.child_modalcart');
       console.log(child_modalcart)
-      let xxx = child_modalcart.closest('.modalcart');
+      let parent_modalcart = child_modalcart.closest('.modalcart');
       child_modalcart.remove();
       document.querySelector('.modalcart').innerHTML = "";
-      $(xxx).append(card_button_modal);
+      $(parent_modalcart).append(card_button_modal);
     }
     //........
     let modalcart = document.querySelector('.modalcart');
     let child_modalcart2 = document.createElement('div');
-    child_modalcart2.classList.add('child_modalcart')
+    child_modalcart2.classList.add('child_modalcart');
     let card_group_inc_dec = document.createElement('div');
-    card_group_inc_dec.classList.add('js-inc-dec')
+    card_group_inc_dec.classList.add('js-inc-dec');
     let card_group_increase = document.createElement('div');
     card_group_increase.classList.add('increase');
     card_group_increase.style.color = "#77798c";
@@ -234,14 +366,27 @@ function removeItem(id) {
   }
 }
 $(document).ready(function () {
+  if (screen.width > 990) {
+    $('.multiple-items').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '<button class="prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z" fill="currentColor" stroke="currentColor"></path></svg></button>',
+      nextArrow: '<button class="nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z" fill="currentColor" stroke="currentColor"></path></svg></button>',
+    });
+  }
+  if (screen.width < 990) {
+    $('.multiple-items').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '<button class="prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z" fill="currentColor" stroke="currentColor"></path></svg></button>',
+      nextArrow: '<button class="nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z" fill="currentColor" stroke="currentColor"></path></svg></button>',
+    });
+  }
 
-  $('.multiple-items').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    prevArrow: '<button class="prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z" fill="currentColor" stroke="currentColor"></path></svg></button>',
-    nextArrow: '<button class="nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z" fill="currentColor" stroke="currentColor"></path></svg></button>',
-  });
+
+
 
   function sameId(categoryId) {
     var requestURL;
@@ -257,16 +402,16 @@ $(document).ready(function () {
         $('.sub-products').text('');
         for (let product of response) {
           $('.sub-products').append(` 
-          <div class="col-6 col-lg-3 col-md-4 ">
-                  <div class="mt-5 card " style="width: 13rem;cursor:pointer" product_id="${product.id}" onclick="addToCard(this,${product.id})">
+          <div class="col-6 col-xl-3 col-md-4" style="padding:0px 15px">
+                  <div class="mt-5 card card2" style="width: 13rem;cursor:pointer" product_id="${product.id}" onclick="addToCard(this,${product.id})">
                       <img class="card-img-top" style="height: 180px;"
                           src="${product.main_image}" alt="Card image cap">
                       <div class="card-body">
                           <h6 class="font-weight-bold card-title">${product.title}</h6>
                           <h6 class="h6 card-text ">${product.amount_by_unit} ${product.unit}</h6>
-                          <div class="althisse row mx-auto mt-5 justify-content-between">
-                              <p class="p-2 card-money text-truncate">$ ${product.price}</p>
-                              <p class="kart rounded-pill border bg-white  p-2 pr-4 pl-4"><svg
+                          <div class="text-truncate althisse row mx-auto mt-5 justify-content-between">
+                              <p class="col-6 p-2 card-money text-truncate">$ ${product.price}</p>
+                              <p class="col-6 kart rounded-pill border bg-white  p-2 "><svg
                                       xmlns="http://www.w3.org/2000/svg" width="14.4" height="12"
                                       viewBox="0 0 14.4 12">
                                       <g data-name="Group 120" transform="translate(-288 -413.89)">
@@ -318,7 +463,7 @@ $(document).ready(function () {
   sameId();
 
   //part of join/sign up
-  const domain = 'http://35.225.243.133';
+
 
   document.querySelector('#form-join').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -416,9 +561,32 @@ $(document).ready(function () {
 });
 var data = [];
 if (localStorage.getItem('lcl_all')) {
+  console.log('local')
   data = JSON.parse(localStorage.getItem('lcl_all'));
-  console.log(data)
+  document.querySelectorAll('.backet-item').forEach((element) => {
+    element.innerHTML = data.length;
+  })
+  let lcl_all_sum = 0;
+  console.log(lcl_all_sum);
+  for (let object of data) {
+    let id = object.lcl_product_id;
+    $.ajax({
+      url: `${domain}/api/products/${id}/`,
+      method: "GET",
+      success: function (response) {
+        document.querySelector('.elmnt4').style.display = 'none';
+        let sum = parseInt(response.price) * parseInt(object.lcl_product_count);
+        lcl_all_sum = lcl_all_sum + sum;
 
+        localStorageBacket(response.id, response.title, object.lcl_product_count, sum, response.main_image,
+          response.amount_by_unit, response.price, lcl_all_sum);
+        console.log(lcl_all_sum);
+        document.querySelectorAll('.all-sum').forEach((element) => {
+          element.innerHTML = parseFloat(lcl_all_sum).toFixed(2);
+        })
+      }
+    })
+  }
 }
 
 //
@@ -449,7 +617,6 @@ function inModal(x, id, card_body_parent, target_element) {
     document.querySelectorAll('.all-sum').forEach((Element) => {
       Element.innerHTML = all_sum;
     })
-
 
     let card_products = document.querySelector('#card_products');
     let card_group_div1 = document.createElement('div');
@@ -623,33 +790,44 @@ function inModal(x, id, card_body_parent, target_element) {
     items.innerHTML = es.length;
   })
 
+  // function lcl_data() {
+  let parent_localstorage = document.querySelectorAll(`[product_id="${id}"]`);
+  let localStorage_product_count = parseInt(parent_localstorage[0].querySelector('.products-count').textContent);
+  // let localStorage_product_allsum = parseFloat(document.querySelector('.all-sum').textContent);
+  // let localStorage_product_sum = parseFloat(parent_localstorage[0].querySelector('.products-money').textContent);
+  // let localStorage_product_cardprice = parent_localstorage[0].querySelector('.card-text').innerHTML;
+  // let localStorage_product_item = parseInt(document.querySelector('.backet-item').textContent);
+  // console.log(localStorage_product_cardprice);
+  let localStorage_data = {
+    "lcl_product_count": localStorage_product_count,
+    "lcl_product_id": id,
+  }
+  console.log(Array.isArray(data), typeof data, data);
+  if (data.length == 0) {
+    data.push(localStorage_data);
+    console.log(Array.isArray(data), typeof data, data);
+    localStorage.setItem('lcl_all', JSON.stringify(data));
+  }
+  else {
+    let findProduct = false;
+    console.log('fsfs')
+    for (let i = 0; i < data.length; i++) {
+      if (data[i]['lcl_product_id'] === id) {
+        data[i]['lcl_product_count'] = localStorage_product_count;
+        localStorage.setItem('lcl_all', JSON.stringify(data));
+        findProduct = true;
+        break;
+      }
+    }
+    if (!findProduct) {
+      data.push(localStorage_data);
+      console.log(Array.isArray(data), typeof data, data);
+      localStorage.setItem('lcl_all', JSON.stringify(data));
+    }
+    // }
 
-  // let parent_localstorage = document.querySelectorAll(`[product_id="${id}"]`);
-  // let localStorage_product_count = parseInt(parent_localstorage[0].querySelector('.products-count').textContent);
-  // // let localStorage_product_allsum = parseFloat(document.querySelector('.all-sum').textContent);
-  // // let localStorage_product_sum = parseFloat(parent_localstorage[0].querySelector('.products-money').textContent);
-  // // let localStorage_product_cardprice = parent_localstorage[0].querySelector('.card-text').innerHTML;
-  // // let localStorage_product_item = parseInt(document.querySelector('.backet-item').textContent);
-  // // console.log(localStorage_product_cardprice);
-  // let localStorage_data = {
-  //   "lcl_product_count": localStorage_product_count,
-  //   "lcl_product_id": id,
-  // }
-  // // console.log(localStorage_data)
-  // if (data.length == 0) {
-  //   data.push(localStorage_data);
-  //   localStorage.setItem('lcl_all', JSON.stringify(localStorage_data));
-  // }
-  // else {
-  //   for (let i = 0; i < data.length; i++) {
-  //     if (data[i]['lcl_product_id'] === localStorage_data[i]['lcl_product_id']) {
-  //       data[i]['lcl_product_count'] = localStorage_data[i]['lcl_product_count'];
-  //       localStorage.setItem('lcl_all', JSON.stringify(localStorage_data));
-  //     }
-  //   }
-  // }
+  }
 }
-
 
 
 //

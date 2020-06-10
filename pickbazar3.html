@@ -17,24 +17,54 @@
 </head>
 
 <body>
-    <div class="d-flex justify-content-between bg-white">
-        <div class="hamburger">
-            <div class="burger">
+    <div class="d-flex justify-content-between bg-white resp-menu">
+        <div class="hamburger" id="hamburger">
+            <div class="burger" id="burger1">
 
             </div>
-            <div class="burger">
+            <div class="burger" id="burger2">
 
             </div>
-            <div class="burger">
+            <div class="burger" id="burger3">
 
             </div>
         </div>
-        <ul class="menuhamburger">
+
+        <div class="menuimg">
+            <img src="index.svg" alt="">
+        </div>
+        <div class="searchbutton">
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 14 14">
+                    <path
+                        d="M14.771,12.752,11.32,9.286a5.519,5.519,0,0,0,1.374-3.634A5.763,5.763,0,0,0,6.839,0,5.763,5.763,0,0,0,.984,5.652,5.763,5.763,0,0,0,6.839,11.3a5.936,5.936,0,0,0,3.354-1.023l3.477,3.492a.783.783,0,0,0,1.08.02A.72.72,0,0,0,14.771,12.752ZM6.839,1.475a4.259,4.259,0,0,1,4.327,4.178A4.259,4.259,0,0,1,6.839,9.83,4.259,4.259,0,0,1,2.511,5.652,4.259,4.259,0,0,1,6.839,1.475Z"
+                        transform="translate(-0.984)" fill="currentColor"></path>
+                </svg></a>
+        </div>
+    </div>
+    <div class="full2" style="width: 100%; height:100%;background-color: rgba(0, 0, 0, 0.5);;position:fixed;top:0;">
+    </div>
+    <div class="menuhamburger">
+        <div class="exit">
+            <div class="css-exit"><svg xmlns="http://www.w3.org/2000/svg" width="10.003" height="10"
+                    viewBox="0 0 10.003 10">
+                    <path data-name="_ionicons_svg_ios-close (5)"
+                        d="M166.686,165.55l3.573-3.573a.837.837,0,0,0-1.184-1.184l-3.573,3.573-3.573-3.573a.837.837,0,1,0-1.184,1.184l3.573,3.573-3.573,3.573a.837.837,0,0,0,1.184,1.184l3.573-3.573,3.573,3.573a.837.837,0,0,0,1.184-1.184Z"
+                        transform="translate(-160.5 -160.55)" fill="currentColor"></path>
+                </svg></div>
+        </div>
+        <div class="css-button1">
+            <button class="button1 text-light font-weight-bold btn btn-outline-success my-2 my-sm-0" data-toggle="modal"
+                data-target="#exampleModal" type="button">Join</button>
+        </div>
+        <ul class="p-0">
             <li class="hlist">
                 <a href="">Home</a>
             </li>
             <li class="hlist">
                 <a href="">Checkout</a>
+            </li>
+            <li class="hlist">
+                <a href="">Checkout Alternative</a>
             </li>
             <li class="hlist">
                 <a href="">Profile</a>
@@ -52,17 +82,8 @@
                 <a href="">Offer</a>
             </li>
         </ul>
-        <div class="menuimg">
-            <img src="index.svg" alt="">
-        </div>
-        <div class="searchbutton">
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14">
-                    <path
-                        d="M14.771,12.752,11.32,9.286a5.519,5.519,0,0,0,1.374-3.634A5.763,5.763,0,0,0,6.839,0,5.763,5.763,0,0,0,.984,5.652,5.763,5.763,0,0,0,6.839,11.3a5.936,5.936,0,0,0,3.354-1.023l3.477,3.492a.783.783,0,0,0,1.08.02A.72.72,0,0,0,14.771,12.752ZM6.839,1.475a4.259,4.259,0,0,1,4.327,4.178A4.259,4.259,0,0,1,6.839,9.83,4.259,4.259,0,0,1,2.511,5.652,4.259,4.259,0,0,1,6.839,1.475Z"
-                        transform="translate(-0.984)" fill="currentColor"></path>
-                </svg></a>
-        </div>
     </div>
+
 
     <nav class="basliq position-fixed nav navbar navbar-expand-lg navbar-light bg-white  container-fluid">
         <a class="navbar-brand" href="#"><img src="index.svg" alt=""></a>
@@ -576,6 +597,48 @@
         </div>
     </section>
 
+    <section class="new-menu">
+        <div class="d-flex bg-white" style="padding: 10px">
+            <div class="items">Grocery</div>
+            <div class="items">Makeup</div>
+            <div class="items">Bags</div>
+            <div class="items">Clothing</div>
+            <div class="items">Book</div>
+            <div class="items">Furniture</div>
+            <div class="items">Medicine</div>
+            <div class="items">Foods</div>
+        </div>
+    </section>
+
+    <section class="new-category">
+        <div id="new-category" class="d-flex justify-content-between" style="padding: 15px;">
+            <div class="d-flex" style="align-items: center">
+                <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                    <path data-name="Path 2029"
+                        d="M13.563,7.876H8.313a.437.437,0,0,0-.437.437v5.25A.437.437,0,0,0,8.313,14h5.25A.437.437,0,0,0,14,13.564V8.314A.437.437,0,0,0,13.563,7.876Zm0-7.875H8.313a.437.437,0,0,0-.437.437v5.25a.437.437,0,0,0,.437.437h5.25A.437.437,0,0,0,14,5.688V.438A.437.437,0,0,0,13.563,0ZM5.687,0H.437A.438.438,0,0,0,0,.438v5.25a.437.437,0,0,0,.437.437h5.25a.437.437,0,0,0,.437-.437V.438A.438.438,0,0,0,5.687,0Zm0,7.875H.437A.437.437,0,0,0,0,8.314v5.25A.437.437,0,0,0,.437,14h5.25a.437.437,0,0,0,.437-.437V8.314A.437.437,0,0,0,5.687,7.876Z"
+                        transform="translate(0 -0.001)" fill="currentColor"></path>
+                </svg>
+                <div class="select-category">Select your Category</div>
+            </div>
+            <div>
+                <svg style=" color: rgb(119, 121, 140);" xmlns="http://www.w3.org/2000/svg" width="10" height="5"
+                    viewBox="0 0 10 5">
+                    <path data-name="Path 2030" d="M0,63.75l5,5,5-5Z" transform="translate(0 -63.75)"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="sol resp-sol border bg-white col-xl-3 col-12">
+            <ul class="left  d-flex flex-column nav nav-pills nav-stacked all-list">
+
+
+            </ul>
+        </div>
+    </section>
+
     <div class="multiple-items mt-5 text-center container-fluid align-items-center p-4 d-flex">
 
         <div class="">
@@ -601,7 +664,7 @@
 
 
     <div class="row">
-        <div class="sol border bg-white col-lg-3  mt-5">
+        <div class="sol border bg-white col-lg-3 mt-5">
             <ul class="left  d-flex flex-column nav nav-pills nav-stacked all-list">
 
 
@@ -609,8 +672,8 @@
         </div>
 
         <div class="col-lg-9 col-12 col-md-12">
-            <div class=" row all-products" style="justify-content: space-evenly;">
-                <div class="w-100 sub-products row">
+            <div class=" row all-products m-0" style="justify-content: space-evenly;">
+                <div class="w-100 sub-products row m-0">
 
                 </div>
                 <!-- Modal -->
@@ -708,8 +771,22 @@
     <script src="pickbazar3.js"></script>
     <script src="src/slick.js"></script>
     <script>
-        document.querySelector('.hamburger').addEventListener('click', function () {
-            document.querySelector('.menuhamburger').classList.toggle('show');
+        // document.querySelector('.hamburger').addEventListener('click', function () {
+        //     document.querySelector('.full2').classList.toggle('show');
+        // })
+        document.querySelector('body').addEventListener('click', function (event) {
+
+            if (event.target.id === 'hamburger') {
+                document.querySelector('.full2').classList.toggle('show');
+                document.querySelector('.menuhamburger').classList.toggle('showmenu');
+
+            } else {
+                document.querySelector('.full2').classList.remove('show');
+                document.querySelector('.menuhamburger').classList.remove('showmenu');
+            }
+        })
+        document.querySelector('.new-category').addEventListener('click', function () {
+            document.querySelector('.resp-sol').classList.toggle('show2');
         })
         document.querySelector('.backet').addEventListener('click', function () {
             document.querySelector('.inbacket').classList.toggle('show');

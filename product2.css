@@ -434,24 +434,13 @@ header{
     background-size: co
 }
 }
-#name-input{
+#name-input,#unit-input,#price-input,#textarea-input,#amount-by-unit,#discount-price,#category-input{
     font-family: "Lato", sans-serif;
     padding: 8px 10px;
     font-size: 16px;
     font-weight: 700;
     color: rgb(22, 31, 106);
 }
-#unit-input{
-    font-family: "Lato", sans-serif;
-    padding: 8px 10px;
-    font-size: 16px;
-    font-weight: 700;
-    color: rgb(22, 31, 106);
-}
-#price-input{
-    font-family: "Lato", sans-serif;
-    padding: 8px 10px;
-    font-size: 16px;
-    font-weight: 700;
-    color: rgb(22, 31, 106);
-}
+
+
+
